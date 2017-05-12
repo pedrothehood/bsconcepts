@@ -1,0 +1,22 @@
+{ "Links":
+	  [{
+			"Link": "http://vsgwdgm0.gmsap.migros.ch:8000/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-ui-debug=true&sap-client=003&sap-language=DE&sap-theme=migros_sap_bluecrystal@http://vsgwdgm0.gmsap.migros.ch:8000/sap/public/bc/themes/~client-003",
+			"LinkKey": "FIORI-LAUNCHPAD-DEBUG",
+			"LinkType": "",
+			"Text": "Fiori Launchpad Debug-Version"
+		},
+		{
+			"Link": "http://vsgwdgm0.gmsap.migros.ch:8000/sap/bc/ui5_ui5/sap/arsrvc_upb_admn/main.html?sap-client=003#/Catalog/X-SAP-UI2-CATALOGPAGE:SAP_ISR_STORE_TC_T",
+			"LinkKey": "KATALOG_ADMIN",
+			"LinkType": "",
+			"Text": "Katalog-Administration 2"
+		},
+		{
+			"Link": "https://sapui5.netweaver.ondemand.com/sdk/#content/Overview.html",
+			"LinkKey": "SAP-UI5-SDK",
+			"LinkType": "",
+			"Text": "SAP-UI5 SDK (Online-Dokumentation)"
+		}
+
+	]
+}
