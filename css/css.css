@@ -1,0 +1,27 @@
+.farbe {
+	color: #CC0000;
+	font-size: 1.3em;
+}
+.farbe2 {
+	color: #aae55c;
+	font-size: 1.3em;
+}
+.licht {
+	color: #FFCC00;
+	font-size: 1.3em;
+}
+.mut {
+	font-size: 2em;
+}
+.formen {
+	font-style: italic;
+	letter-spacing: 9px;
+	font-size: 1.2em;
+}
+.wide {
+	letter-spacing: 7px;
+}
+.gallerie{
+	padding-top: 10px;
+	line-height: 120%;
+}

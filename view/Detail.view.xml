@@ -1,24 +1,10 @@
-<mvc:View
-	controllerName="ypglmasterdetailportal.controller.Detail"
-	xmlns="sap.m"
-	xmlns:mvc="sap.ui.core.mvc"
-	xmlns:semantic="sap.m.semantic">
-
-	<semantic:DetailPage
-		id="page"
-		navButtonPress="onNavBack"
-		showNavButton="{device>/system/phone}"
-		title="{i18n>detailTitle}"
-		busy="{detailView>/busy}"
-		busyIndicatorDelay="{detailView>/delay}">
-
+<mvc:View controllerName="ypglmasterdetailportal.controller.Detail" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc"
+	xmlns:semantic="sap.m.semantic" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:core="sap.ui.core">
+	<semantic:DetailPage id="page" navButtonPress="onNavBack" showNavButton="{device>/system/phone}" title="{i18n>detailTitle}"
+		busy="{detailView>/busy}" busyIndicatorDelay="{detailView>/delay}">
 		<semantic:content>
-			<ObjectHeader
-				id="objectHeader"
-				title="{Text}"
-				numberUnit="{LinkType}">
-			</ObjectHeader>
-			<IconTabBar
+			<ObjectHeader id="objectHeader" title="{Text}" numberUnit="{LinkType}"></ObjectHeader>
+			<!--			<IconTabBar
 				id="iconTabBar"
 				class="sapUiResponsiveContentPadding">
 				<items>
@@ -33,16 +19,13 @@
 						tooltip="{i18n>detailIconTabBarAttachments}">
 					</IconTabFilter>
 				</items>
-			</IconTabBar>
-
+			</IconTabBar>-->
+			<Panel headerText="" visible="{=${Key}==='HOME'}" >
+ <core:Fragment fragmentName="ypglmasterdetailportal.view.home" type="XML" />
+			</Panel>
 		</semantic:content>
-
 		<semantic:sendEmailAction>
-			<semantic:SendEmailAction
-				id="shareEmail"
-				press="onShareEmailPress"/>
+			<semantic:SendEmailAction id="shareEmail" press="onShareEmailPress"/>
 		</semantic:sendEmailAction>
-
 	</semantic:DetailPage>
-
 </mvc:View>

@@ -10,6 +10,7 @@ sap.ui.define([
 		return UIComponent.extend("ypglmasterdetailportal.Component", {
 
 			metadata : {
+				"includes": ["css/css.css"],
 				manifest : "json"
 			},
 

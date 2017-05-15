@@ -35,7 +35,7 @@
 				items="{
 						path: '/Links',
 					sorter: {
-						path: 'Text',
+						path: 'LinkKey',
 						descending: false
 						},
 					groupHeaderFactory: '.createGroupHeader'
@@ -65,6 +65,7 @@
 						title="{Text}"
 						numberUnit="{LinkType}">
 					</ObjectListItem>
+				
 				</items>
 			</List>
 		</semantic:content>

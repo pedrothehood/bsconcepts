@@ -1,21 +1,61 @@
 { "Links":
 	  [{
 			"Link": "http://vsgwdgm0.gmsap.migros.ch:8000/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-ui-debug=true&sap-client=003&sap-language=DE&sap-theme=migros_sap_bluecrystal@http://vsgwdgm0.gmsap.migros.ch:8000/sap/public/bc/themes/~client-003",
-			"LinkKey": "FIORI-LAUNCHPAD-DEBUG",
+			"LinkKey": "100_HOME",
+			"Key":"HOME",
 			"LinkType": "",
-			"Text": "Fiori Launchpad Debug-Version"
-		},
+			"Text": "Home",
+			"Inhalt": "<h2><span>Prozessbegleitung / Coaching  </span></h2>  "
+		             
+				},
 		{
 			"Link": "http://vsgwdgm0.gmsap.migros.ch:8000/sap/bc/ui5_ui5/sap/arsrvc_upb_admn/main.html?sap-client=003#/Catalog/X-SAP-UI2-CATALOGPAGE:SAP_ISR_STORE_TC_T",
-			"LinkKey": "KATALOG_ADMIN",
+			"LinkKey": "200_PROZESSBEGLEITUNG",
+				"Key":"PROZESSBEGLEITUNG",
 			"LinkType": "",
-			"Text": "Katalog-Administration 2"
+			"Text": "Prozessbegleitung"
+			,
+			"Inhalt": "Prozessbegleitung"
 		},
 		{
 			"Link": "https://sapui5.netweaver.ondemand.com/sdk/#content/Overview.html",
-			"LinkKey": "SAP-UI5-SDK",
+			"LinkKey": "300_FENG_SHUI",
+				"Key":"FENG_SHUI",
 			"LinkType": "",
-			"Text": "SAP-UI5 SDK (Online-Dokumentation)"
+			"Text": "Feng Shui",
+			"Inhalt": "Feng Shui"
+		},
+			{
+			"Link": "https://sapui5.netweaver.ondemand.com/sdk/#content/Overview.html",
+			"LinkKey": "400_FOTOGRAFIE",
+				"Key":"FOTOGRAFIE",
+			"LinkType": "",
+			"Text": "Fotografie",
+				"Inhalt": "Fotografie"
+		},
+			{
+			"Link": "https://sapui5.netweaver.ondemand.com/sdk/#content/Overview.html",
+			"LinkKey": "500_PROFIL",
+			"Key":"PROFIL",
+			"LinkType": "",
+			"Text": "Profil",
+			"Inhalt": "Profil"
+		},
+			{
+			"Link": "https://sapui5.netweaver.ondemand.com/sdk/#content/Overview.html",
+			"LinkKey": "600_KONTAKT",
+			"Key":"KONTAKT",
+			"LinkType": "",
+			"Text": "Kontakt",
+			"Inhalt": "Kontakt"
+		},
+			{
+			"Link": "https://sapui5.netweaver.ondemand.com/sdk/#content/Overview.html",
+			"LinkKey": "700_LINKS",
+			"Key":"LINKS",
+			"LinkType": "",
+			"Text": "Links",
+			"Inhalt": "Links"
 		}
 
 	]
