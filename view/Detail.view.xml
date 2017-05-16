@@ -20,8 +20,20 @@
 					</IconTabFilter>
 				</items>
 			</IconTabBar>-->
-			<Panel headerText="" visible="{=${Key}==='HOME'}" >
- <core:Fragment fragmentName="ypglmasterdetailportal.view.home" type="XML" />
+			<Panel headerText="" visible="{=${Key}==='HOME'}">
+				<core:Fragment fragmentName="ypglmasterdetailportal.view.home" type="XML"/>
+			</Panel>
+			<Panel headerText="" visible="{=${Key}==='PROZESSBEGLEITUNG'}">
+				<core:Fragment fragmentName="ypglmasterdetailportal.view.prozessbegleitung" type="XML"/>
+			</Panel>
+			<Panel headerText="" visible="{=${Key}==='FENG_SHUI'}">
+				<core:Fragment fragmentName="ypglmasterdetailportal.view.fengShui" type="XML"/>
+			</Panel>
+			<Panel headerText="" visible="{=${Key}==='FOTOGRAFIE'}">
+				<core:Fragment fragmentName="ypglmasterdetailportal.view.fotografie" type="XML"/>
+			</Panel>
+					<Panel headerText="" visible="{=${Key}==='PROFIL'}">
+				<core:Fragment fragmentName="ypglmasterdetailportal.view.profil" type="XML"/>
 			</Panel>
 		</semantic:content>
 		<semantic:sendEmailAction>

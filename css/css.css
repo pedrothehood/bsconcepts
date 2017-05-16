@@ -1,3 +1,21 @@
+.first_absatz {
+	margin: 10px 0 0 0;
+	line-height: 120%;
+	text-indent: 0px;
+	text-align:justify;
+}
+.home_absatz {
+	margin: 10px 0 0 0;
+	line-height: 120%;
+	text-indent: 0px;
+	text-align:left;
+}
+.absatz_middle {
+	margin: 10px 0 0 0;
+	line-height: 120%;
+	text-indent: 0px;
+	text-align:center;
+}
 .farbe {
 	color: #CC0000;
 	font-size: 1.3em;

@@ -1,0 +1,67 @@
+<!-- xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:form="sap.ui.layout.form" 
+	xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"> -->
+<!--  Falls Dialog auf Handy in Vollbild gewünscht, dann in Dialog:  stretch="{device>/isPhone}"   contentWidth="400px" einfuegen  -->
+<core:FragmentDefinition xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns:core="sap.ui.core"
+	xmlns:form="sap.ui.layout.form" xmlns:layout="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Panel>
+		<content>
+			<VBox>
+				<html:img class="left_image" src="images/Bewerbungsfoto-s-w.jpg" alt="" width="80" height="96"></html:img>
+				<html:p></html:p>
+				<html:h2>Ausbildung
+				</html:h2>
+				<html:div class="text_small">
+					<html:table width="95%" border="0">
+						<html:tr>
+							<html:td class="first">2009</html:td>
+							<html:td>Abschluss SVEB 1 Ausbilderin</html:td>
+						</html:tr>
+						<html:tr>
+							<html:td class="first">2007 – 2009</html:td>
+							<html:td>
+								Managementtrainer-Verhaltenstrainer</html:td>
+						</html:tr>
+						<html:tr>
+							<html:td class="first">2004 – 2005</html:td>
+							<html:td>Feng Shui Ausbildung (Westliches Feng Shui)</html:td>
+						</html:tr>
+						<html:tr>
+							<html:td class="first">2000 – 2002</html:td>
+							<html:td>Feng Shui Ausbildung (Östliches Feng Shui)</html:td>
+						</html:tr>
+						<html:tr>
+							<html:td class="first">1989 – 1997</html:td>
+							<html:td>Div. Verkaufsschulungen</html:td>
+						</html:tr>
+					</html:table>
+				</html:div>
+				<html:h2>
+					Tätigkeiten</html:h2>
+				<html:div class="text_small">
+					<html:table width="95%" border="0">
+						<html:tr>
+							<html:td class="first">&#8226;</html:td>
+							<html:td>
+								Prozessbegleitung und Coaching von Einzelpersonen und Gruppen</html:td>
+						</html:tr>
+						<html:tr>
+							<html:td class="first">&#8226;</html:td>
+							<html:td>
+								Beratung im Bereich Innengestaltung, Wohn- und Geschäftsbereiche</html:td>
+						</html:tr>
+						<html:tr>
+							<html:td class="first">&#8226;</html:td>
+							<html:td>Planung und Gestaltung von Privat- und Geschäftsräumen bei Neubau, Umbau, Renovationen</html:td>
+						</html:tr>
+						<html:tr>
+							<html:td class="first">&#8226;</html:td>
+							<html:td>
+								Aussendienstmitarbeiterin Medical Verkauf und Applicationsschulungen, Workshops</html:td>
+						</html:tr>
+					</html:table>
+				</html:div>
+			</VBox>
+		</content>
+	</Panel>
+</core:FragmentDefinition>

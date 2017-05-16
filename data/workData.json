@@ -1,7 +1,8 @@
 { "Links":
 	  [{
 			"Link": "http://vsgwdgm0.gmsap.migros.ch:8000/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-ui-debug=true&sap-client=003&sap-language=DE&sap-theme=migros_sap_bluecrystal@http://vsgwdgm0.gmsap.migros.ch:8000/sap/public/bc/themes/~client-003",
-			"LinkKey": "100_HOME",
+			"LinkKey": "HOME",
+			"SortKey": "100",
 			"Key":"HOME",
 			"LinkType": "",
 			"Text": "Home",
@@ -10,7 +11,8 @@
 				},
 		{
 			"Link": "http://vsgwdgm0.gmsap.migros.ch:8000/sap/bc/ui5_ui5/sap/arsrvc_upb_admn/main.html?sap-client=003#/Catalog/X-SAP-UI2-CATALOGPAGE:SAP_ISR_STORE_TC_T",
-			"LinkKey": "200_PROZESSBEGLEITUNG",
+			"LinkKey": "PROZESSBEGLEITUNG",
+				"SortKey": "200",
 				"Key":"PROZESSBEGLEITUNG",
 			"LinkType": "",
 			"Text": "Prozessbegleitung"
@@ -19,7 +21,8 @@
 		},
 		{
 			"Link": "https://sapui5.netweaver.ondemand.com/sdk/#content/Overview.html",
-			"LinkKey": "300_FENG_SHUI",
+			"LinkKey": "FENG_SHUI",
+				"SortKey": "300",
 				"Key":"FENG_SHUI",
 			"LinkType": "",
 			"Text": "Feng Shui",
@@ -27,7 +30,8 @@
 		},
 			{
 			"Link": "https://sapui5.netweaver.ondemand.com/sdk/#content/Overview.html",
-			"LinkKey": "400_FOTOGRAFIE",
+			"LinkKey": "FOTOGRAFIE",
+				"SortKey": "400",
 				"Key":"FOTOGRAFIE",
 			"LinkType": "",
 			"Text": "Fotografie",
@@ -35,7 +39,8 @@
 		},
 			{
 			"Link": "https://sapui5.netweaver.ondemand.com/sdk/#content/Overview.html",
-			"LinkKey": "500_PROFIL",
+			"LinkKey": "PROFIL",
+				"SortKey": "500",
 			"Key":"PROFIL",
 			"LinkType": "",
 			"Text": "Profil",
@@ -43,7 +48,8 @@
 		},
 			{
 			"Link": "https://sapui5.netweaver.ondemand.com/sdk/#content/Overview.html",
-			"LinkKey": "600_KONTAKT",
+			"LinkKey": "KONTAKT",
+				"SortKey": "600",
 			"Key":"KONTAKT",
 			"LinkType": "",
 			"Text": "Kontakt",
@@ -51,7 +57,8 @@
 		},
 			{
 			"Link": "https://sapui5.netweaver.ondemand.com/sdk/#content/Overview.html",
-			"LinkKey": "700_LINKS",
+			"LinkKey": "LINKS",
+				"SortKey": "700",
 			"Key":"LINKS",
 			"LinkType": "",
 			"Text": "Links",

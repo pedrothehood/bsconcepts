@@ -35,7 +35,7 @@
 				items="{
 						path: '/Links',
 					sorter: {
-						path: 'LinkKey',
+						path: 'SortKey',
 						descending: false
 						},
 					groupHeaderFactory: '.createGroupHeader'

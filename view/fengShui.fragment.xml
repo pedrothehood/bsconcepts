@@ -1,0 +1,31 @@
+<!-- xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:form="sap.ui.layout.form" 
+	xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"> -->
+<!--  Falls Dialog auf Handy in Vollbild gewünscht, dann in Dialog:  stretch="{device>/isPhone}"   contentWidth="400px" einfuegen  -->
+<core:FragmentDefinition xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns:core="sap.ui.core"
+	xmlns:form="sap.ui.layout.form" xmlns:layout="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Panel>
+		<content>
+			<VBox>
+				<html:h2>
+					<html:strong>Wohn- und Geschäftberatung</html:strong>
+				</html:h2>
+				<html:div class="first_absatz">Es lohnt sich, unsere Träume bezüglich Wohn- und Geschäftsräumen zu verwirklichen.</html:div>
+				<html:div class="first_absatz">Das Leben wird durch mehr
+					<html:span class="farbe">Farbe</html:span>
+					und mehr
+					<html:span class="licht">Licht</html:span>
+					bereichert. Wir dürfen uns in dieser Hinsicht mehr Mut zugestehen.</html:div>
+				<html:div class="first_absatz">Durch die Konzentration auf wenige Einrichtungs-Elemente erreichen wir oft mehr.
+				</html:div>
+				<html:div class="first_absatz">Feng Shui, moderne Technik und Design müssen kein Widerspruch sein.</html:div>
+				<html:div class="first_absatz">Es ist wichtig, die individuellen Ansprüche und Bedürfnisse zu integrieren. Dabei steht der Mensch mit seinen
+					Wünschen, Zielen und Träumen im Mittelpunkt. Diese werden durch ein Erstgespräch in Erfahrung gebracht.</html:div>
+				<html:div class="first_absatz">Was ist Ihnen wichtig, wie wollen Sie leben, wo brauchen Sie Unterstützung?</html:div>
+				<html:div class="first_absatz">Einer ersten Analyse anhand der Grundrisspläne und eingetragenen Himmelsrichtungen folgen Gespräche, Analysen
+					und Lösungs- vorschläge vor Ort.</html:div>
+				<!-- InstanceEndEditable -->
+			</VBox>
+		</content>
+	</Panel>
+</core:FragmentDefinition>

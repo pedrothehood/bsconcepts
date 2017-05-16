@@ -1,0 +1,45 @@
+<!-- xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:form="sap.ui.layout.form" 
+	xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"> -->
+<!--  Falls Dialog auf Handy in Vollbild gewünscht, dann in Dialog:  stretch="{device>/isPhone}"   contentWidth="400px" einfuegen  -->
+<core:FragmentDefinition xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns:core="sap.ui.core"
+	xmlns:form="sap.ui.layout.form" xmlns:layout="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Panel>
+		<content>
+			<VBox>
+				<!--<FormattedText id="formattedTextHome"   ></FormattedText> -->
+				<html:h2>
+					<html:span>Prozessbegleitung / Coaching
+					</html:span>
+				</html:h2>
+				<html:div class="first_absatz">
+					Wir werden uns den Veränderungs-Prozesse bewusst und verstehen uns selber wie auch andere besser.</html:div>
+				<html:div class="first_absatz">
+					Wir werden tagtäglich herausgefordert und müssen uns auf Veränderungen einlassen. Veränderungen können im ersten Moment Angst und
+					Unsicherheit hervorrufen. Wir sind blockiert und können die neuen Chancen nicht erkennen.
+				</html:div>
+				<html:div class="first_absatz">Im Einzel- oder Gruppencoaching werden Herausforderungen gemeinsam reflektiert. Neue Wege kristallisieren
+					sich heraus, Chancen werden erkannt und die Probleme in aktiver Teilnahme gelöst.
+				</html:div>
+				<html:div class="first_absatz">
+					In Seminaren lernt man sein eigenes Verhalten zu verstehen und zu reflektieren, und ist damit in der Lage, das Verhalten der Anderen
+					einzuschätzen. Mit diesem Wissen (aktives Zuhören, ok-ok Positionen etc.) und dieser Erfahrung &quot;ausgerüstet&quot;, ergibt sich eine
+					gute Grundlage für eine fruchtbare zwischenmenschliche Kommunikation, sowohl beruflich als auch privat.
+				</html:div>
+				<html:div class="first_absatz">Der Kommunikations-&quot;Sender&quot; hat eine Idee und will diese mitteilen und damit etwas erreichen. Aber
+					zwischen Sender und Empfänger lauern viele Kommunikationsstörungen:</html:div>
+				<html:div class="absatz_middle">
+					„ gedacht“ ist nicht gesagt …<html:br/>
+					„gesagt“ ist nicht gehört …<html:br/>
+					„gehört“ ist nicht verstanden …<html:br/>
+					„verstanden“ ist nicht gewollt …<html:br/>
+					„gewollt“ ist nicht gekonnt …<html:br/>
+					„gekonnt und gewollt“ ist nicht getan …<html:br/>
+					„getan“ ist nicht beibehalten
+					<html:br/>
+				</html:div>
+				<html:br/>
+			</VBox>
+		</content>
+	</Panel>
+</core:FragmentDefinition>
