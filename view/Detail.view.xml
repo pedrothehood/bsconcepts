@@ -35,6 +35,13 @@
 					<Panel headerText="" visible="{=${Key}==='PROFIL'}">
 				<core:Fragment fragmentName="ypglmasterdetailportal.view.profil" type="XML"/>
 			</Panel>
+				<Panel headerText="" visible="{=${Key}==='KONTAKT'}">
+				<core:Fragment fragmentName="ypglmasterdetailportal.view.kontakt" type="XML"/>
+			</Panel>
+				<Panel headerText="" visible="{=${Key}==='LINKS'}">
+				<core:Fragment fragmentName="ypglmasterdetailportal.view.links" type="XML"/>
+			</Panel>
+			
 		</semantic:content>
 		<semantic:sendEmailAction>
 			<semantic:SendEmailAction id="shareEmail" press="onShareEmailPress"/>
