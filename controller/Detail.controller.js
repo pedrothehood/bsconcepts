@@ -33,7 +33,8 @@ sap.ui.define([
 			goToItem: function(oEvent){
 				var router = this.getRouter();
 				var customData =oEvent.getSource().getCustomData()[0];
-				router.navTo("object",{objectId:customData.getValue()});
+				var bReplace = jQuery.device.is.phone ? false : true;
+				router.navTo("object",{objectId:customData.getValue()},bReplace);
 				//console.log("hallo");
 				//alert(itemKey);	
 			},
