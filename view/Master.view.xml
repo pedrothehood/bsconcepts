@@ -30,7 +30,7 @@
 				visible="{device>/support/touch}"
 				refresh="onRefresh" />
 			<!-- For client side filtering add this to the items attribute:  parameters: {operationMode: 'Client'}}" -->
-			<List
+			<List class="sapContrast sapContrastPlus"
 				id="list"
 				items="{
 						path: '/Links',
