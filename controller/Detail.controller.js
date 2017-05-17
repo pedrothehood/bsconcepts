@@ -29,6 +29,14 @@ sap.ui.define([
 
 			//	this.getOwnerComponent().getModel().metadataLoaded().then(this._onMetadataLoaded.bind(this));
 			},
+			
+			goToItem: function(oEvent){
+				var router = this.getRouter();
+				var customData =oEvent.getSource().getCustomData()[0];
+				router.navTo("object",{objectId:customData.getValue()});
+				//console.log("hallo");
+				//alert(itemKey);	
+			},
 
 			/* =========================================================== */
 			/* event handlers                                              */
