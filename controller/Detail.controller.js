@@ -26,15 +26,17 @@ sap.ui.define([
 				this.getRouter().getRoute("object").attachPatternMatched(this._onObjectMatched, this);
 
 				this.setModel(oViewModel, "detailView");
-
+              debugger;
 			//	this.getOwnerComponent().getModel().metadataLoaded().then(this._onMetadataLoaded.bind(this));
 			},
 			
 			goToItem: function(oEvent){
+				debugger;
 				var router = this.getRouter();
 				var customData =oEvent.getSource().getCustomData()[0];
 				var bReplace = jQuery.device.is.phone ? false : true;
-				router.navTo("object",{objectId:customData.getValue()},bReplace);
+				var customValue = customData.getValue();
+				router.navTo("object",{objectId:customValue},bReplace);
 				//console.log("hallo");
 				//alert(itemKey);	
 			},
