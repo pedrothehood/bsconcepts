@@ -1,8 +1,8 @@
 {
 	"kalender": [ {
-			"Jahr": "2009",
-			"Front":"Kalender_2009.jpg",
-			"Text":"Kalender von 2009",
+			"Jahr": "2010",
+			"Front":"Kalender_2010.jpg",
+			"Text":"Kalender von 2010",
 			"Monate": [{
 				"01": "01-Januar.jpg",
 				"02": "02-Februar.jpg",
@@ -19,9 +19,9 @@
 			}]
 		},
 		{
-			"Jahr": "2009-Ostern",
-			"Front":"Kalender_2009-Ostern.jpg",
-			"Text":"Oster-Kalender von 2009",
+			"Jahr": "2009",
+			"Front":"Kalender_2009.jpg",
+			"Text":"Kalender von 2009",
 			"Monate": [{
 				"01": "01-Januar.jpg",
 				"02": "02-Februar.jpg",
