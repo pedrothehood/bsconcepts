@@ -13,7 +13,7 @@
 				<List class="sapContrast sapContrastPlus" headerText="Kalender" id="kalenderList" items="{ path: 'kalender>/kalender' }">
 					<items>
 						<StandardListItem title=" {kalender>Jahr}" description="{kalender>Text}" icon="images/kalender/{kalender>Jahr}/front/{kalender>Front}"
-							iconDensityAware="false" iconInset="false" press="onCalenderKlick"/>
+							iconDensityAware="false" iconInset="false" press="onCalenderKlick" type="Active"/>
 					</items>
 				</List>
 			</VBox>

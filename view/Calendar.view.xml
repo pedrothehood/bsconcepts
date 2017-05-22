@@ -1,4 +1,4 @@
-<mvc:View controllerName="ypglmasterdetailportal.controller.Detail" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc"
+<mvc:View controllerName="ypglmasterdetailportal.controller.Calendar" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc"
 	xmlns:semantic="sap.m.semantic" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:core="sap.ui.core">
 	<semantic:DetailPage id="page" navButtonPress="onNavBack" showNavButton="{device>/system/phone}" title="{i18n>detailTitle}"
 		busy="{detailView>/busy}" busyIndicatorDelay="{detailView>/delay}">
@@ -20,31 +20,19 @@
 					</IconTabFilter>
 				</items>
 			</IconTabBar>-->
-			<Panel headerText="" visible="{=${Key}==='HOME'}">
-				<core:Fragment fragmentName="ypglmasterdetailportal.view.home" type="XML"/>
-			</Panel>
-			<Panel headerText="" visible="{=${Key}==='PROZESSBEGLEITUNG'}">
-				<core:Fragment fragmentName="ypglmasterdetailportal.view.prozessbegleitung" type="XML"/>
-			</Panel>
-			<Panel headerText="" visible="{=${Key}==='FENG_SHUI'}">
-				<core:Fragment fragmentName="ypglmasterdetailportal.view.fengShui" type="XML"/>
-			</Panel>
-			<Panel headerText="" visible="{=${Key}==='FOTOGRAFIE'}">
-				<core:Fragment fragmentName="ypglmasterdetailportal.view.fotografie" type="XML"/>
-			</Panel>
-				<Panel headerText="" visible="{=${Key}==='KALENDER'}">
-				<core:Fragment fragmentName="ypglmasterdetailportal.view.kalenderliste" type="XML"/>
-			</Panel>
-					<Panel headerText="" visible="{=${Key}==='PROFIL'}">
-				<core:Fragment fragmentName="ypglmasterdetailportal.view.profil" type="XML"/>
-			</Panel>
-				<Panel headerText="" visible="{=${Key}==='KONTAKT'}">
-				<core:Fragment fragmentName="ypglmasterdetailportal.view.kontakt" type="XML"/>
-			</Panel>
-				<Panel headerText="" visible="{=${Key}==='LINKS'}">
-				<core:Fragment fragmentName="ypglmasterdetailportal.view.links" type="XML"/>
-			</Panel>
-			
+		
+			<Carousel class="sapUiContentPadding" loop="true">
+		<pages>
+			<Image src="{img>/products/pic1}" alt="Example picture of speakers"/>
+ 
+			<Image src="{img>/products/pic2}" alt="Example picture of USB flash drive"/>
+ 
+			<Image src="{img>/products/pic3}" alt="Example picture of spotlight"/>
+ 
+			<Image src="{img>/products/screw}" alt="Example picture of screw"/>
+ 
+		</pages>
+	</Carousel>
 			
 		</semantic:content>
 		<semantic:sendEmailAction>

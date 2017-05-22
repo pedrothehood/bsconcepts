@@ -123,7 +123,7 @@
 					"object"
 				]
 			}, {
-				"pattern": "ZDEV_PORTALS/Calendar/{calendarId}",
+				"pattern": "ZDEV_PORTALS/KALENDER/{year}",
 				"name": "calendar",
 				"target": [
 					"master",

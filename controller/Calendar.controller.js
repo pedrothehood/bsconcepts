@@ -23,7 +23,7 @@ sap.ui.define([
 				delay: 0
 			});
 
-			this.getRouter().getRoute("object").attachPatternMatched(this._onObjectMatched, this);
+			this.getRouter().getRoute("calendar").attachPatternMatched(this._onObjectMatched, this);
 
 			this.setModel(oViewModel, "detailView");
 			//	this.getOwnerComponent().getModel().metadataLoaded().then(this._onMetadataLoaded.bind(this));
@@ -81,10 +81,10 @@ sap.ui.define([
 			// Path ermitteln:
 			var oView = this.getView();
 			//	oElementBinding = oView.getElementBinding();
-			var sPath = oEvent.getParameters().arguments.objectId;
+			var sPath = oEvent.getParameters().arguments.year;
 			var oResourceBundle = this.getResourceBundle();
 
-			// Objekt-Pfad aus Wert ermitteln:
+	/*		// Objekt-Pfad aus Wert ermitteln:
 			var tab = oView.getModel().oData.Links;
 			var retIndex;
 
@@ -96,7 +96,7 @@ sap.ui.define([
 					}
 				}
 			}
-			findFirst(tab);
+			findFirst(tab); */
 
 			/*			tab.find(   funktioniert nicht wegen find-Befehl im IE
 							function(obj, index) {
