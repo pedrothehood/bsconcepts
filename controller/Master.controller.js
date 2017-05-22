@@ -23,7 +23,7 @@ sap.ui.define([
 			 * @public
 			 */
 			onInit : function () {
-				debugger;
+//				debugger;
 				// Control state model
 				var oList = this.byId("list"),
 					oViewModel = this._createViewModel(),
@@ -31,7 +31,7 @@ sap.ui.define([
 					// so it can be restored later on. Busy handling on the master list is
 					// taken care of by the master list itself.
 					iOriginalBusyDelay = oList.getBusyIndicatorDelay();
-                debugger;
+ //               debugger;
 
 				this._oList = oList;
 				// keeps the filter and search state
@@ -71,7 +71,7 @@ sap.ui.define([
 			 * @public
 			 */
 			onUpdateFinished : function (oEvent) {
-				  debugger;
+//				  debugger;
 				// update the master list object counter after new data is loaded
 				this._updateListItemCount(oEvent.getParameter("total"));
 				// hide pull to refresh if necessary
@@ -124,7 +124,7 @@ sap.ui.define([
 			 * @public
 			 */
 			onSelectionChange : function (oEvent) {
-				debugger;
+//				debugger;
 				// get the list item, either from the listItem parameter or from the event's source itself (will depend on the device-dependent mode).
 				this._showDetail(oEvent.getParameter("listItem") || oEvent.getSource());
 			},
@@ -211,7 +211,7 @@ sap.ui.define([
 			 * @private
 			 */
 			_showDetail : function (oItem) {
-				  debugger;
+//				  debugger;
 				  var linkKey = oItem.getBindingContext().getProperty("LinkKey");
 				  var router = this.getRouter();
 				var bReplace = !Device.system.phone;

@@ -6,7 +6,7 @@ sap.ui.define([
 ], function(BaseController, JSONModel, formatter) {
 	"use strict";
 
-	return BaseController.extend("ypglmasterdetailportal.controller.Detail", {
+	return BaseController.extend("ypglmasterdetailportal.controller.Calendar", {
 
 		formatter: formatter,
 

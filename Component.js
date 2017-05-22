@@ -21,6 +21,7 @@ sap.ui.define([
 			 * @override
 			 */
 			init : function () {
+				var kalModel = this.getModel("kalender");
 				this.oListSelector = new ListSelector();
 				this._oErrorHandler = new ErrorHandler(this);
 

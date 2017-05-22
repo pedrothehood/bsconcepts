@@ -6,7 +6,8 @@
 			"Key":"HOME",
 			"LinkType": "",
 			"Text": "Home",
-			"Inhalt": "<h2><span>Prozessbegleitung / Coaching  </span></h2>  "
+			"Inhalt": "<h2><span>Prozessbegleitung / Coaching  </span></h2>  ",
+			"controller":"home"
 		             
 				},
 		{
@@ -17,7 +18,8 @@
 			"LinkType": "",
 			"Text": "Prozessbegleitung"
 			,
-			"Inhalt": "Prozessbegleitung"
+			"Inhalt": "Prozessbegleitung",
+			"controller":"prozessbegleitung"
 		},
 		{
 			"Link": "https://sapui5.netweaver.ondemand.com/sdk/#content/Overview.html",
@@ -26,7 +28,8 @@
 				"Key":"FENG_SHUI",
 			"LinkType": "",
 			"Text": "Feng Shui",
-			"Inhalt": "Feng Shui"
+			"Inhalt": "Feng Shui",
+			"controller":"fengShui"
 		},
 			{
 			"Link": "https://sapui5.netweaver.ondemand.com/sdk/#content/Overview.html",
@@ -35,7 +38,8 @@
 				"Key":"FOTOGRAFIE",
 			"LinkType": "",
 			"Text": "Fotografie",
-				"Inhalt": "Fotografie"
+				"Inhalt": "Fotografie",
+			"controller":"fotografie"
 		},
 			{
 			"Link": "https://sapui5.netweaver.ondemand.com/sdk/#content/Overview.html",
@@ -44,7 +48,8 @@
 				"Key":"KALENDER",
 			"LinkType": "",
 			"Text": "Kalenderfotos",
-				"Inhalt": "Kalenderfotos"
+				"Inhalt": "Kalenderfotos",
+			"controller":"kalenderliste"
 		},
 			{
 			"Link": "https://sapui5.netweaver.ondemand.com/sdk/#content/Overview.html",
@@ -53,7 +58,8 @@
 			"Key":"PROFIL",
 			"LinkType": "",
 			"Text": "Profil",
-			"Inhalt": "Profil"
+			"Inhalt": "Profil",
+			"controller":"profil"
 		},
 			{
 			"Link": "https://sapui5.netweaver.ondemand.com/sdk/#content/Overview.html",
@@ -62,7 +68,8 @@
 			"Key":"KONTAKT",
 			"LinkType": "",
 			"Text": "Kontakt",
-			"Inhalt": "Kontakt"
+			"Inhalt": "Kontakt",
+			"controller":"kontakt"
 		},
 			{
 			"Link": "https://sapui5.netweaver.ondemand.com/sdk/#content/Overview.html",
@@ -71,7 +78,8 @@
 			"Key":"LINKS",
 			"LinkType": "",
 			"Text": "Links",
-			"Inhalt": "Links"
+			"Inhalt": "Links",
+			"controller":"links"
 		}
 
 	]

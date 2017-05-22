@@ -1,3 +1,61 @@
-{ "kalender":
-	  [{"Jahr":"2008"}]
+{
+	"kalender": [ {
+			"Jahr": "2009",
+			"Front":"Kalender_2009.jpg",
+			"Text":"Kalender von 2009",
+			"Monate": [{
+				"01": "01-Januar.jpg",
+				"02": "02-Februar.jpg",
+				"03": "03-Maerz.jpg",
+				"04": "04-April.jpg",
+				"05": "05-Mai.jpg",
+				"06": "06-Juni.jpg",
+				"07": "07-Juli.jpg",
+				"08": "08-August.jpg",
+				"09": "09-September.jpg",
+				"10": "10-Oktober.jpg",
+				"11": "11-November.jpg",
+				"12": "12-Dezember.jpg"
+			}]
+		},
+		{
+			"Jahr": "2009-Ostern",
+			"Front":"Kalender_2009-Ostern.jpg",
+			"Text":"Oster-Kalender von 2009",
+			"Monate": [{
+				"01": "01-Januar.jpg",
+				"02": "02-Februar.jpg",
+				"03": "03-Maerz.jpg",
+				"04": "04-April.jpg",
+				"05": "05-Mai.jpg",
+				"06": "06-Juni.jpg",
+				"07": "07-Juli.jpg",
+				"08": "08-August.jpg",
+				"09": "09-September.jpg",
+				"10": "10-Oktober.jpg",
+				"11": "11-November.jpg",
+				"12": "12-Dezember.jpg"
+			}]
+		},
+		{
+			"Jahr": "2008",
+			"Front":"Kalender_2008.jpg",
+			"Text":"Kalender von 2008",
+			"Monate": [{
+				"01": "01-Januar.jpg",
+				"02": "02-Februar.jpg",
+				"03": "03-Maerz.jpg",
+				"04": "04-April.jpg",
+				"05": "05-Mai.jpg",
+				"06": "06-Juni.jpg",
+				"07": "07-Juli.jpg",
+				"08": "08-August.jpg",
+				"09": "09-September.jpg",
+				"10": "10-Oktober.jpg",
+				"11": "11-November.jpg",
+				"12": "12-Dezember.jpg"
+			}]
+		}
+
+	]
 }
