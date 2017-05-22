@@ -103,10 +103,10 @@ sap.ui.define([
 								if (obj.LinkKey == sPath) retIndex = index;
 							}
 						);*/
-			var path = '/Links/' + retIndex;
+			var path ; //= '/Links/' + retIndex;
 			//var oObject = oView.getModel().getObject(path);
 
-			var sObjectId = oEvent.getParameter("arguments").objectId;
+			var sObjectId = oEvent.getParameter("arguments").year;
 			//	this.getModel().metadataLoaded().then( function() {
 			/*	var sObjectPath = this.getModel().createKey("ZDEV_PORTALS", {  // Meine Analysen haben ergeben, dass Mandt=null ubergeben wird, ich konnte die Urs
         	 	                          // Ursache nicht herausfinden, der Unterschied zu anderen SEGW-Models ist, dass der Mandant in der Struktur ist!!!
