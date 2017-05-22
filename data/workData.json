@@ -39,6 +39,15 @@
 		},
 			{
 			"Link": "https://sapui5.netweaver.ondemand.com/sdk/#content/Overview.html",
+			"LinkKey": "KALENDER",
+				"SortKey": "450",
+				"Key":"KALENDER",
+			"LinkType": "",
+			"Text": "Kalenderfotos",
+				"Inhalt": "Kalenderfotos"
+		},
+			{
+			"Link": "https://sapui5.netweaver.ondemand.com/sdk/#content/Overview.html",
 			"LinkKey": "PROFIL",
 				"SortKey": "500",
 			"Key":"PROFIL",
