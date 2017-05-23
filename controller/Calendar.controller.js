@@ -120,6 +120,7 @@ sap.ui.define([
 
 			for (var i = 0; i < modelData.Monate.length; i++) {
 				modelData.Monate[i].Jahr = sObjectId; // Jahr muss auf "Monat" vererbt werden, wegen XML-Zugriff
+				modelData.Monate[i].Text = modelData.Text; 
 			}
 
 			var monatModel = new sap.ui.model.json.JSONModel();
