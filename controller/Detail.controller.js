@@ -46,11 +46,12 @@ sap.ui.define([
         	var router = this.getRouter();
 			//var customData = oEvent.getSource().getCustomData()[0];
 			var bReplace = jQuery.device.is.phone ? false : true;
+			var year = oEvent.getSource().getBindingContext("kalender").getProperty("Jahr");
 			//var customValue = customData.getValue();
 			router.navTo("calendar", {
 				//objectId: customValue
-				year:"2008"
-			}, bReplace);
+				year:year
+			}, false);    // korr.
         	
         	
         },

@@ -41,13 +41,10 @@ sap.ui.define([
 			//alert(itemKey);	
 		},
 
-        onCalenderKlick: function(oEvent){
-        	
-        	
-        	
-        	
-        },
-        
+		onCalenderKlick: function(oEvent) {
+
+		},
+
 		/* =========================================================== */
 		/* event handlers                                              */
 		/* =========================================================== */
@@ -80,30 +77,30 @@ sap.ui.define([
 			//				return;  /// Abkoppeln Detail
 			// Path ermitteln:
 			var oView = this.getView();
-			//	oElementBinding = oView.getElementBinding();
+			// oElementBinding = oView.getElementBinding();
 			var sPath = oEvent.getParameters().arguments.year;
 			var oResourceBundle = this.getResourceBundle();
 
-	/*		// Objekt-Pfad aus Wert ermitteln:
-			var tab = oView.getModel().oData.Links;
+			// Objekt-Pfad aus Wert ermitteln:
+			var tab = oView.getModel("kalender").oData.kalender;
 			var retIndex;
 
 			function findFirst(tab) {
 				for (var i = 0; i < tab.length; i++) {
-					if (sPath == tab[i].LinkKey) {
+					if (sPath == tab[i].Jahr) {
 						retIndex = i;
 						return i;
 					}
 				}
 			}
-			findFirst(tab); */
+			findFirst(tab);
 
 			/*			tab.find(   funktioniert nicht wegen find-Befehl im IE
 							function(obj, index) {
 								if (obj.LinkKey == sPath) retIndex = index;
 							}
 						);*/
-			var path ; //= '/Links/' + retIndex;
+			var path = '/kalender/' + retIndex + "/Monate";
 			//var oObject = oView.getModel().getObject(path);
 
 			var sObjectId = oEvent.getParameter("arguments").year;
@@ -114,7 +111,25 @@ sap.ui.define([
 					}); */
 			//	var sObjectPath = "DEV_PORTALS(Mandt='994',LinkKey='SAP-UI5-SDK')";
 			//	this._bindView("/" + sObjectId);
-			this._bindView(path);
+			var listPath = '/kalender/' + retIndex;
+			//	this._bindView(path);
+			this._bindView(listPath);
+			// Model nur für Einzelanzeige erstellen:
+			var data = this.getView().getModel("kalender").getData();
+			var modelData = data.kalender[retIndex];
+
+			for (var i = 0; i < modelData.Monate.length; i++) {
+				modelData.Monate[i].Jahr = sObjectId; // Jahr muss auf "Monat" vererbt werden, wegen XML-Zugriff
+			}
+
+			var monatModel = new sap.ui.model.json.JSONModel();
+			monatModel.setData(modelData);
+
+			this.setModel(monatModel, "monatModel");
+
+			var oList = this.byId("MonatsListe");
+			//oList.bindItems("kalender>"+listPath);
+			//oList.bindElement(listPath);
 			var oViewModel = this.getModel("detailView");
 
 			// If the view was not bound yet its not busy, only if the binding requests data it is set to busy again
@@ -135,7 +150,7 @@ sap.ui.define([
 
 			// If the view was not bound yet its not busy, only if the binding requests data it is set to busy again
 			oViewModel.setProperty("/busy", false);
-
+			// Liste explizit binden
 			this.getView().bindElement({
 				path: sObjectPath,
 				events: {
@@ -167,39 +182,41 @@ sap.ui.define([
 			var oResourceBundle = this.getResourceBundle();
 
 			// Objekt-Pfad aus Wert ermitteln:
-			var tab2 = oView.getModel().oData.Links;
+			var tab2 = oView.getModel("kalender").oData.kalender;
 			var retIndex;
-			
-						function findFirst(tab) {
+
+			function findFirst(tab) {
 				for (var i = 0; i < tab.length; i++) {
-					if (sPath.substr(1) === tab[i].LinkKey) {
+					if (sPath.substr(1) === tab[i].Jahr) {
 						retIndex = i;
 						return i;
 					}
 				}
 			}
 			findFirst(tab2);
-			
-		/*	tab.find(
-				function(obj, index) {
-					if (obj.LinkKey == sPath.substr(1)) retIndex = index;
-				}
-			);*/
-			var path = '/Links/' + retIndex;
-			var oObject = oView.getModel().getObject(sPath);
+
+			/*	tab.find(
+					function(obj, index) {
+						if (obj.LinkKey == sPath.substr(1)) retIndex = index;
+					}
+				);*/
+			//	var path = '/Links/' + retIndex;
+			var path = oView.getElementBinding().getPath();
+			var oObject = oView.getModel("kalender").getObject(sPath);
 
 			//var	oObject = oView.getModel().getObject(sPath);
-			var sObjectId = oObject.LinkKey;
-			var sObjectName = oObject.Text;
+			//	var sObjectId = oObject.LinkKey;
+			//	var sObjectName = oObject.Text;
 			var oViewModel = this.getModel("detailView");
 
-			//	this.getOwnerComponent().oListSelector.selectAListItem(sPath);
-			this.getOwnerComponent().oListSelector.selectAListItem(sPath);
+			/*			//	this.getOwnerComponent().oListSelector.selectAListItem(sPath);
+						this.getOwnerComponent().oListSelector.selectAListItem(sPath);
 
-			oViewModel.setProperty("/shareSendEmailSubject",
-				oResourceBundle.getText("shareSendEmailObjectSubject", [sObjectId]));
-			oViewModel.setProperty("/shareSendEmailMessage",
-				oResourceBundle.getText("shareSendEmailObjectMessage", [sObjectName, sObjectId, location.href]));
+						oViewModel.setProperty("/shareSendEmailSubject",
+							oResourceBundle.getText("shareSendEmailObjectSubject", [sObjectId]));
+						oViewModel.setProperty("/shareSendEmailMessage",
+							oResourceBundle.getText("shareSendEmailObjectMessage", [sObjectName, sObjectId, location.href]));
+				*/
 		},
 
 		_onMetadataLoaded: function() {

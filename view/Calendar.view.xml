@@ -20,19 +20,31 @@
 					</IconTabFilter>
 				</items>
 			</IconTabBar>-->
-		
-			<Carousel class="sapUiContentPadding" loop="true">
+ 		<Carousel class="sapUiContentPadding" loop="true" pages="{ path: 'monatModel>/Monate' }">
 		<pages>
-			<Image src="{img>/products/pic1}" alt="Example picture of speakers"/>
- 
-			<Image src="{img>/products/pic2}" alt="Example picture of USB flash drive"/>
- 
-			<Image src="{img>/products/pic3}" alt="Example picture of spotlight"/>
- 
-			<Image src="{img>/products/screw}" alt="Example picture of screw"/>
- 
+			<Image src="images/kalender/{monatModel>Jahr}/monate/{monatModel>monat}" alt="Example picture of speakers"/>
+
+		 
 		</pages>
-	</Carousel>
+	</Carousel> 
+	
+			<List class="sapContrast sapContrastPlus" headerText="Kalender" id="MonatsListe" items="{path: 'monatModel>/Monate' }">
+				<items>
+					<StandardListItem title="{monatModel>monat}" iconDensityAware="false" iconInset="false"  
+					  icon="images/kalender/{monatModel>Jahr}/monate/{monatModel>monat}"/>
+				</items>
+			</List>
+						<!--	<List class="sapContrast sapContrastPlus" headerText="Monate" id="MonatsListe3" items="{path: 'kalender' }">
+				<items>
+					<StandardListItem title="Hallo2" iconDensityAware="false" iconInset="false" type="Active"/>
+				</items>
+			</List>
+				<List class="sapContrast sapContrastPlus" headerText="Monate" id="MonatsListe4" items="{path: 'kalender' }">
+				<items>
+					<StandardListItem title="Hallo2" iconDensityAware="false" iconInset="false" type="Active"/>
+				</items>
+			</List>-->
+			
 			
 		</semantic:content>
 		<semantic:sendEmailAction>
