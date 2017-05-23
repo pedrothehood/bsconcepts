@@ -25,10 +25,10 @@
 		</semantic:subHeader>
 
 		<semantic:content>
-			<PullToRefresh
+		<!--	<PullToRefresh
 				id="pullToRefresh"
 				visible="{device>/support/touch}"
-				refresh="onRefresh" />
+				refresh="onRefresh" />-->
 			<!-- For client side filtering add this to the items attribute:  parameters: {operationMode: 'Client'}}" -->
 			<List class="sapContrast sapContrastPlus"
 				id="list"
