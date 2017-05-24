@@ -1,9 +1,10 @@
 <mvc:View controllerName="ypglmasterdetailportal.controller.Detail" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc"
 	xmlns:semantic="sap.m.semantic" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:core="sap.ui.core">
-	<semantic:DetailPage id="page" navButtonPress="onNavBack" showNavButton="{device>/system/phone}" title="{i18n>detailTitle}"
+	<semantic:DetailPage id="page" navButtonPress="onNavBack" showNavButton="{device>/system/phone}" title="{Text}"
 		busy="{detailView>/busy}" busyIndicatorDelay="{detailView>/delay}">
 		<semantic:content>
-			<ObjectHeader id="objectHeader" title="{Text}" numberUnit="{LinkType}"></ObjectHeader>
+		<!--	<Toolbar title="{Text}" ></Toolbar>-->
+		<!--	<ObjectHeader id="objectHeader" title="{Text}" numberUnit="{LinkType}"></ObjectHeader>-->
 			<!--			<IconTabBar
 				id="iconTabBar"
 				class="sapUiResponsiveContentPadding">

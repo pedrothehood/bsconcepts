@@ -1,17 +1,19 @@
 <mvc:View controllerName="ypglmasterdetailportal.controller.Calendar" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc"
-	xmlns:semantic="sap.m.semantic" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:core="sap.ui.core">
-	<semantic:DetailPage id="page" navButtonPress="onNavBack" showNavButton="{device>/system/phone}" title="{i18n>detailTitle}"
+	xmlns:semantic="sap.m.semantic" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout">
+	<semantic:DetailPage id="page" navButtonPress="onNavBack" showNavButton="{device>/system/phone}" title="Kalender"
 		busy="{detailView>/busy}" busyIndicatorDelay="{detailView>/delay}">
 		<semantic:content>
 			<ObjectHeader id="objectHeader" title="{monatModel>/Monate/0/Text}" numberUnit="{LinkType}"></ObjectHeader>
 		
 		<!--	<Text text="{monatModel>/Monate/0/Text}"></Text>-->
-			<Carousel  loop="true" pages="{ path: 'monatModel>/Monate' }">
+		<l:VerticalLayout class="sapUiSmallMargin" >
+			<Carousel id="calendarCarousel" class="sapUiResponsivePadding" loop="true" pages="{ path: 'monatModel>/Monate' }"
+			>
 				<pages>
 					<Image src="images/kalender/{monatModel>Jahr}/monate/{monatModel>monat}" alt="Example picture of speakers"/>
 				</pages>
 			</Carousel>
-
+      </l:VerticalLayout>
 <!-- Liste zum Testen			<List class="sapContrast sapContrastPlus" headerText="{monatModel>/Monate/0/Text}" id="MonatsListe" items="{path: 'monatModel>/Monate' }">
 				<items>
 					<StandardListItem title="{monatModel>monat}" iconDensityAware="false" iconInset="false"

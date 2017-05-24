@@ -7,10 +7,10 @@
 	<Panel>
 		<content>
 			<VBox>
-				<html:h2>
+			<!--	<html:h2>
 					<html:span>Kalenderfotos</html:span>
-				</html:h2>
-				<List class="sapContrast sapContrastPlus" headerText="Kalender" id="kalenderList" items="{ path: 'kalender>/kalender' }">
+				</html:h2>-->
+				<List    headerText="Kalender" id="kalenderList" items="{ path: 'kalender>/kalender' }"  >
 					<items>
 						<StandardListItem title=" {kalender>Jahr}" description="{kalender>Text}" icon="images/kalender/{kalender>Jahr}/front/{kalender>Front}"
 							iconDensityAware="false" iconInset="false" press="onCalenderKlick" type="Active"/>
