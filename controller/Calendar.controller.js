@@ -120,7 +120,7 @@ sap.ui.define([
 
 			for (var i = 0; i < modelData.Monate.length; i++) {
 				modelData.Monate[i].Jahr = sObjectId; // Jahr muss auf "Monat" vererbt werden, wegen XML-Zugriff
-				modelData.Monate[i].Text = modelData.Text; 
+				modelData.Monate[i].Text = modelData.Text;
 			}
 
 			var monatModel = new sap.ui.model.json.JSONModel();
@@ -135,6 +135,23 @@ sap.ui.define([
 
 			// If the view was not bound yet its not busy, only if the binding requests data it is set to busy again
 			oViewModel.setProperty("/busy", false);
+
+			// Immer erste Seite setzen:
+			var carousel = this.getView().byId("calendarCarousel");
+			var pages = carousel.getPages();
+			//	var length = carousel.getPages().length;
+			/*	if (length > 1){
+						carousel.setActivePage(pages[1]);  // auslösen pageChange
+						carousel.setActivePage(pages[0]);
+				}
+				else{*/
+			carousel.setActivePage(pages[0]);
+			//	}
+			// Text setzen:
+			var carouselImageLabel = this.getView().byId("carouselImageLabel");
+			if (carouselImageLabel) {
+				carouselImageLabel.setText(carousel.getPages()[0].getAlt());
+			}
 			//	}.bind(this));
 		},
 
@@ -233,8 +250,28 @@ sap.ui.define([
 			//	oViewModel.setProperty("/busy", true);
 			// Restore original busy indicator delay for the detail view
 			oViewModel.setProperty("/delay", iOriginalViewBusyDelay);
-		}
+		},
+		onPageChange: function(oEvent) {
+			var carousel = this.getView().byId("calendarCarousel");
+			var activeCarouselId = oEvent.getSource().getActivePage(); // gibt nur Id!!!
+			var activeCarouselPage = null;
+			//var pages = carousel.getPages();
+			// Aktive Page als Objekt ermitteln:
+			for (var i = 0; i < carousel.getPages().length; i++) {
+				if (activeCarouselId === carousel.getPages()[i].getId()) {
+					activeCarouselPage = carousel.getPages()[i];
+				}
+			}
+			var carouselImageLabel = this.getView().byId("carouselImageLabel");
 
+			if (carouselImageLabel && activeCarouselPage) {
+				carouselImageLabel.setText(activeCarouselPage.getAlt());
+				//alert("hallo");
+			}
+			/*			pageChanged: function(){
+						alert("hallo");
+					}*/
+		}
 	});
 
 });

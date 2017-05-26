@@ -75,7 +75,7 @@ sap.ui.define([
 				// update the master list object counter after new data is loaded
 				this._updateListItemCount(oEvent.getParameter("total"));
 				// hide pull to refresh if necessary
-				this.byId("pullToRefresh").hide();
+			//	this.byId("pullToRefresh").hide();
 			},
 
 			/**

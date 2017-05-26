@@ -4,88 +4,126 @@
 			"Front": "Kalender_2010.jpg",
 			"Text": "Kalender von 2010",
 			"Monate": [ {
-				"monat": "01-Januar.jpg"
+				"monat": "01-Januar.jpg",
+				"alt": "Januar"
 			}, {
 				"monat": "02-Februar.jpg"
+				,
+				"alt": "Februar"
 			}, {
-				"monat": "03-Maerz.jpg"
+				"monat": "03-Maerz.jpg",
+				"alt": "März"
 			}, {
-				"monat": "04-April.jpg"
+				"monat": "04-April.jpg",
+				"alt": "April"
 			}, {
-				"monat": "05-Mai.jpg"
+				"monat": "05-Mai.jpg",
+				"alt": "Mai"
 			}, {
-				"monat": "06-Juni.jpg"
+				"monat": "06-Juni.jpg",
+				"alt": "Juni"
 			}, {
-				"monat": "07-Juli.jpg"
+				"monat": "07-Juli.jpg",
+				"alt": "Juli"
 			}, {
-				"monat": "08-August.jpg"
+				"monat": "08-August.jpg",
+				"alt": "August"
 			}, {
-				"monat": "09-September.jpg"
+				"monat": "09-September.jpg",
+				"alt": "September"
 			}, {
-				"monat": "10-Oktober.jpg"
+				"monat": "10-Oktober.jpg",
+				"alt": "Oktober"
 			}, {
-				"monat": "11-November.jpg"
+				"monat": "11-November.jpg",
+				"alt": "November"
 			}, {
-				"monat": "12-Dezember.jpg"
+				"monat": "12-Dezember.jpg",
+				"alt": "Dezember"
 			}]
 		}, {
 			"Jahr": "2009",
 			"Front": "Kalender_2009.jpg",
 			"Text": "Kalender von 2009",
-	"Monate": [  {
-				"monat": "01-Januar.jpg"
+		"Monate": [ {
+				"monat": "01-Januar.jpg",
+				"alt": "Januar"
 			}, {
 				"monat": "02-Februar.jpg"
+				,
+				"alt": "Februar"
 			}, {
-				"monat": "03-Maerz.jpg"
+				"monat": "03-Maerz.jpg",
+				"alt": "März"
 			}, {
-				"monat": "04-April.jpg"
+				"monat": "04-April.jpg",
+				"alt": "April"
 			}, {
-				"monat": "05-Mai.jpg"
+				"monat": "05-Mai.jpg",
+				"alt": "Mai"
 			}, {
-				"monat": "06-Juni.jpg"
+				"monat": "06-Juni.jpg",
+				"alt": "Juni"
 			}, {
-				"monat": "07-Juli.jpg"
+				"monat": "07-Juli.jpg",
+				"alt": "Juli"
 			}, {
-				"monat": "08-August.jpg"
+				"monat": "08-August.jpg",
+				"alt": "August"
 			}, {
-				"monat": "09-September.jpg"
+				"monat": "09-September.jpg",
+				"alt": "September"
 			}, {
-				"monat": "10-Oktober.jpg"
+				"monat": "10-Oktober.jpg",
+				"alt": "Oktober"
 			}, {
-				"monat": "11-November.jpg"
+				"monat": "11-November.jpg",
+				"alt": "November"
 			}, {
-				"monat": "12-Dezember.jpg"
+				"monat": "12-Dezember.jpg",
+				"alt": "Dezember"
 			}]
 		}, {
 			"Jahr": "2008",
 			"Front": "Kalender_2008.jpg",
 			"Text": "Kalender von 2008",
-	"Monate": [
-			 {
-				"monat": "01-Januar.jpg"
+		"Monate": [ {
+				"monat": "01-Januar.jpg",
+				"alt": "Januar"
 			}, {
 				"monat": "02-Februar.jpg"
+				,
+				"alt": "Februar"
 			}, {
-				"monat": "03-Maerz.jpg"
+				"monat": "03-Maerz.jpg",
+				"alt": "März"
 			}, {
-				"monat": "04-April.jpg"
+				"monat": "04-April.jpg",
+				"alt": "April"
 			}, {
-				"monat": "05-Mai.jpg"
+				"monat": "05-Mai.jpg",
+				"alt": "Mai"
 			}, {
-				"monat": "06-Juni.jpg"
+				"monat": "06-Juni.jpg",
+				"alt": "Juni"
 			}, {
-				"monat": "07-Juli.jpg"
+				"monat": "07-Juli.jpg",
+				"alt": "Juli"
 			}, {
-				"monat": "08-August.jpg"
+				"monat": "08-August.jpg",
+				"alt": "August"
 			}, {
-				"monat": "09-September.jpg"
+				"monat": "09-September.jpg",
+				"alt": "September"
 			}, {
-				"monat": "10-Oktober.jpg"
+				"monat": "10-Oktober.jpg",
+				"alt": "Oktober"
 			}, {
-				"monat": "11-November.jpg"
+				"monat": "11-November.jpg",
+				"alt": "November"
 			}, {
-				"monat": "12-Dezember.jpg"
+				"monat": "12-Dezember.jpg",
+				"alt": "Dezember"
 			}]
 		}
 
