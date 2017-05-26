@@ -7,9 +7,24 @@
 			"LinkType": "",
 			"Text": "Home",
 			"Inhalt": "<h2><span>Prozessbegleitung / Coaching  </span></h2>  ",
-			"controller":"home"
+			"controller":"home",
+			"containerViewRoute":"object"
 		             
 				},
+				
+						{
+			"Link": "http://vsgwdgm0.gmsap.migros.ch:8000/sap/bc/ui5_ui5/sap/arsrvc_upb_admn/main.html?sap-client=003#/Catalog/X-SAP-UI2-CATALOGPAGE:SAP_ISR_STORE_TC_T",
+			"LinkKey": "AUSSTELLUNG_01",
+				"SortKey": "150",
+				"Key":"AUSSTELLUNG",
+			"LinkType": "",
+			"Text": "Ausstellung"
+			,
+			"Inhalt": "Ausstellung",
+			"controller":"Ausstellung",
+				"containerViewRoute":"ausstellung"
+		},
+		
 		{
 			"Link": "http://vsgwdgm0.gmsap.migros.ch:8000/sap/bc/ui5_ui5/sap/arsrvc_upb_admn/main.html?sap-client=003#/Catalog/X-SAP-UI2-CATALOGPAGE:SAP_ISR_STORE_TC_T",
 			"LinkKey": "PROZESSBEGLEITUNG",
@@ -19,7 +34,8 @@
 			"Text": "Prozessbegleitung"
 			,
 			"Inhalt": "Prozessbegleitung",
-			"controller":"prozessbegleitung"
+			"controller":"prozessbegleitung",
+			"containerViewRoute":"object"
 		},
 		{
 			"Link": "https://sapui5.netweaver.ondemand.com/sdk/#content/Overview.html",
@@ -29,7 +45,8 @@
 			"LinkType": "",
 			"Text": "Feng Shui",
 			"Inhalt": "Feng Shui",
-			"controller":"fengShui"
+			"controller":"fengShui",
+			"containerViewRoute":"object"
 		},
 			{
 			"Link": "https://sapui5.netweaver.ondemand.com/sdk/#content/Overview.html",
@@ -39,7 +56,8 @@
 			"LinkType": "",
 			"Text": "Fotografie",
 				"Inhalt": "Fotografie",
-			"controller":"fotografie"
+			"controller":"fotografie",
+			"containerViewRoute":"object"
 		},
 			{
 			"Link": "https://sapui5.netweaver.ondemand.com/sdk/#content/Overview.html",
@@ -49,7 +67,8 @@
 			"LinkType": "",
 			"Text": "Kalenderfotos",
 				"Inhalt": "Kalenderfotos",
-			"controller":"kalenderliste"
+			"controller":"kalenderliste",
+			"containerViewRoute":"object"
 		},
 			{
 			"Link": "https://sapui5.netweaver.ondemand.com/sdk/#content/Overview.html",
@@ -59,7 +78,8 @@
 			"LinkType": "",
 			"Text": "Profil",
 			"Inhalt": "Profil",
-			"controller":"profil"
+			"controller":"profil",
+			"containerViewRoute":"object"
 		},
 			{
 			"Link": "https://sapui5.netweaver.ondemand.com/sdk/#content/Overview.html",
@@ -69,7 +89,8 @@
 			"LinkType": "",
 			"Text": "Kontakt",
 			"Inhalt": "Kontakt",
-			"controller":"kontakt"
+			"controller":"kontakt",
+			"containerViewRoute":"object"
 		},
 			{
 			"Link": "https://sapui5.netweaver.ondemand.com/sdk/#content/Overview.html",
@@ -79,7 +100,8 @@
 			"LinkType": "",
 			"Text": "Links",
 			"Inhalt": "Links",
-			"controller":"links"
+			"controller":"links",
+			"containerViewRoute":"object"
 		}
 
 	]

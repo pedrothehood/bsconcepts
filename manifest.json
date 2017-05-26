@@ -122,7 +122,21 @@
 					"master",
 					"object"
 				]
-			}, {
+				
+			}, 
+			
+			
+			
+			 {
+				"pattern": "BSCONCEPTS/AUSSTELLUNG/{objectId}",
+				"name": "ausstellung",
+				"target": [
+					"master",
+					"ausstellung"
+				]
+			}
+			,
+			{
 				"pattern": "BSCONCEPTS/KALENDER/{year}",
 				"name": "calendar",
 				"target": [
@@ -140,6 +154,11 @@
 				"object": {
 					"viewName": "Detail",
 					"viewId": "detail",
+					"viewLevel": 2
+				},
+					"ausstellung": {
+					"viewName": "Ausstellung",
+					"viewId": "ausstellung",
 					"viewLevel": 2
 				},
 				"calendar": {

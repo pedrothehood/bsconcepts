@@ -186,14 +186,14 @@ sap.ui.define([
 			 * @private
 			 */
 			_onMasterMatched :  function() {
-				debugger;
 				this.getOwnerComponent().oListSelector.oWhenListLoadingIsDone.then(
 					function (mParams) {
 						if (mParams.list.getMode() === "None") {
 							return;
 						}
 						var sObjectId = mParams.firstListitem.getBindingContext().getProperty("LinkKey");
-						this.getRouter().navTo("object", {objectId : sObjectId}, true);
+						var route = mParams.firstListitem.getBindingContext().getProperty("containerViewRoute");  
+						this.getRouter().navTo( route, {objectId : sObjectId}, true);  
 					}.bind(this),
 					function (mParams) {
 						if (mParams.error) {
@@ -215,7 +215,8 @@ sap.ui.define([
 				  var linkKey = oItem.getBindingContext().getProperty("LinkKey");
 				  var router = this.getRouter();
 				var bReplace = !Device.system.phone;
-				router.navTo("object", {
+				var route =  oItem.getBindingContext().getProperty("containerViewRoute"); 
+				router.navTo(route, {
 					objectId : linkKey
 				}, bReplace);
 			},

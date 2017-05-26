@@ -1,0 +1,33 @@
+<mvc:View controllerName="ypglmasterdetailportal.controller.Ausstellung" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc"
+	xmlns:semantic="sap.m.semantic" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout">
+	<semantic:DetailPage id="page" navButtonPress="onNavBack" showNavButton="{device>/system/phone}" title="Kalender" busy="{detailView>/busy}"
+		busyIndicatorDelay="{detailView>/delay}">
+		<semantic:content>
+			<ObjectHeader id="objectHeader" title="Ausstellung" numberUnit="{LinkType}"></ObjectHeader>
+			<!--	<Text text="{monatModel>/Monate/0/Text}"></Text>  title="{monatModel>/Monate/0/Text}"-->
+			<l:VerticalLayout class="sapUiSmallMargin">
+				<Toolbar>
+					<ToolbarSpacer/>
+					<Label id="AusstellungImageLabel"  text="Von Oktober bis Dezember findet eine Ausstellung in Locarno statt."></Label>
+					<ToolbarSpacer/>
+				</Toolbar>
+				<Text text="Folgende Bilder werden gezeigt"></Text>
+			<!--	<Carousel id="calendarCarousel" class="sapUiResponsivePadding" loop="true" pages="{ path: 'monatModel>/Monate' }" pageChanged="onPageChange">
+					<pages>
+						<Image src="images/kalender/{monatModel>Jahr}/monate/{monatModel>monat}" alt="{monatModel>alt}"/>
+					</pages>
+				</Carousel>-->
+			</l:VerticalLayout>
+			
+			<!-- Liste zum Testen			<List class="sapContrast sapContrastPlus" headerText="{monatModel>/Monate/0/Text}" id="MonatsListe" items="{path: 'monatModel>/Monate' }">
+				<items>
+					<StandardListItem title="{monatModel>monat}" iconDensityAware="false" iconInset="false"
+						icon="images/kalender/{monatModel>Jahr}/monate/{monatModel>monat}"/>
+				</items>
+			</List>-->
+		</semantic:content>
+	<!--	<semantic:sendEmailAction>
+			<semantic:SendEmailAction id="shareEmail" press="onShareEmailPress"/>
+		</semantic:sendEmailAction>-->
+	</semantic:DetailPage>
+</mvc:View>

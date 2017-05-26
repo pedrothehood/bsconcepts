@@ -48,8 +48,8 @@
 			
 			
 		</semantic:content>
-		<semantic:sendEmailAction>
+<!--		<semantic:sendEmailAction>
 			<semantic:SendEmailAction id="shareEmail" press="onShareEmailPress"/>
-		</semantic:sendEmailAction>
+		</semantic:sendEmailAction>-->
 	</semantic:DetailPage>
 </mvc:View>
