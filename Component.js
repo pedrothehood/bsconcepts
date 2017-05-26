@@ -67,6 +67,9 @@ sap.ui.define([
 					}
 				}
 				return this._sContentDensityClass;
+			},
+			sendMail: function(){
+					 sap.m.URLHelper.triggerEmail("peter.gloor@mgb.ch", "Webseite", "Hallo Barbara");
 			}
 
 		});

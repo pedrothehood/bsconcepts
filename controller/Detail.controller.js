@@ -223,6 +223,10 @@ sap.ui.define([
 			//	oViewModel.setProperty("/busy", true);
 			// Restore original busy indicator delay for the detail view
 			oViewModel.setProperty("/delay", iOriginalViewBusyDelay);
+		},
+		sendMail: function(){
+			this.getOwnerComponent().sendMail();
+		//	 sap.m.URLHelper.triggerEmail("peter.gloor@mgb.ch", "Webseite", "Hallo Barbara");
 		}
 
 	});

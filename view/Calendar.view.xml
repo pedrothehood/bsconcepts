@@ -25,7 +25,7 @@
 			</List>-->
 		</semantic:content>
 		<semantic:sendEmailAction>
-			<semantic:SendEmailAction id="shareEmail" press="onShareEmailPress"/>
+			<semantic:SendEmailAction id="shareEmail" press="sendMail"/>
 		</semantic:sendEmailAction>
 	</semantic:DetailPage>
 </mvc:View>

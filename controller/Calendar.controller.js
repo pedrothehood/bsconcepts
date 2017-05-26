@@ -271,6 +271,10 @@ sap.ui.define([
 			/*			pageChanged: function(){
 						alert("hallo");
 					}*/
+		},
+			sendMail: function(){
+			this.getOwnerComponent().sendMail();
+		//	 sap.m.URLHelper.triggerEmail("peter.gloor@mgb.ch", "Webseite", "Hallo Barbara");
 		}
 	});
 

@@ -2,7 +2,7 @@
 	xmlns:semantic="sap.m.semantic" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:core="sap.ui.core">
 	<semantic:DetailPage id="page" navButtonPress="onNavBack" showNavButton="{device>/system/phone}" title="{Text}"
 		busy="{detailView>/busy}" busyIndicatorDelay="{detailView>/delay}">
-		<semantic:content>
+ 	<semantic:content> 
 		<!--	<Toolbar title="{Text}" ></Toolbar>-->
 		<!--	<ObjectHeader id="objectHeader" title="{Text}" numberUnit="{LinkType}"></ObjectHeader>-->
 			<!--			<IconTabBar
@@ -44,12 +44,26 @@
 			</Panel>
 				<Panel headerText="" visible="{=${Key}==='LINKS'}">
 				<core:Fragment fragmentName="ypglmasterdetailportal.view.links" type="XML"/>
-			</Panel>
-			
-			
-		</semantic:content>
-<!--		<semantic:sendEmailAction>
-			<semantic:SendEmailAction id="shareEmail" press="onShareEmailPress"/>
-		</semantic:sendEmailAction>-->
+			</Panel> 
+	<!--		<Panel><content>
+				<VBox>
+			<Button >EMail</Button>
+			</VBox>
+			</content>
+			</Panel>-->
+ 	</semantic:content> 
+ 
+		<semantic:sendEmailAction>
+			<semantic:SendEmailAction id="shareEmail" press="sendMail"/>
+		</semantic:sendEmailAction>
+	<!--	<semantic:customShareMenuContent>
+		<Button onclick="sendMail" >EMail</Button>
+		</semantic:customShareMenuContent>-->
+		<!--<footer>-->
+		<!--	<Tooolbar>
+			<ToolbarSpacer/>
+				<Button onclick="sendMail" >EMail</Button>
+			</Tooolbar>-->
+		<!--</footer>-->
 	</semantic:DetailPage>
 </mvc:View>

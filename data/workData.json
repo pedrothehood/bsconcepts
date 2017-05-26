@@ -6,7 +6,7 @@
 			"Key":"HOME",
 			"LinkType": "",
 			"Text": "Home",
-			"Inhalt": "<h2><span>Prozessbegleitung / Coaching  </span></h2>  ",
+			"Inhalt": "Prozessbegleitung / Coaching",
 			"controller":"home",
 			"containerViewRoute":"object"
 		             
