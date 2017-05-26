@@ -7,9 +7,9 @@
 	<Panel>
 		<content>
 			<VBox>
-				<html:h2>
+				<html:h3>
 					<html:span>Links</html:span>
-				</html:h2>
+				</html:h3>
 
 <html:div class="text_small">
 	<html:table width="95%" border="0">

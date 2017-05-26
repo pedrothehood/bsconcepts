@@ -7,9 +7,9 @@
 	<Panel>
 		<content>
 			<VBox>
-				<html:h2>
+				<html:h3>
 					<html:span>Kontakt</html:span>
-				</html:h2>
+				</html:h3>
 				<html:p>Barbara E. Schmid - Suhr AG<html:br/>
 					+41 79 738 96 88<html:br/>
 				</html:p>

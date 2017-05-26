@@ -8,10 +8,10 @@
 		<content>
 			<VBox>
 				<!--<FormattedText id="formattedTextHome"   ></FormattedText> -->
-				<html:h2>
+				<html:h3>
 					<html:span>Prozessbegleitung / Coaching
 					</html:span>
-				</html:h2>
+				</html:h3>
 				<html:div class="home_absatz">
 					<html:table width="95%" border="0">
 						<html:tr>
@@ -34,10 +34,9 @@
 							</html:td>
 						</html:tr>
 					</html:table>
-					<html:br/>
-					<html:h2>
+					<html:h3>
 						<html:span>Einrichten + Gestalten von Geschäfts- und Privaträumen</html:span>
-					</html:h2>
+					</html:h3>
 					<html:div class="home_absatz">
 						<html:table width="95%" border="0">
 							<html:tr>
@@ -74,9 +73,9 @@
 							</html:tr>
 						</html:table>
 					</html:div>
-					<html:h2>
+					<html:h3>
 						<html:span>Fotografie</html:span>
-					</html:h2>
+					</html:h3>
 					<html:div class="home_absatz">
 						<html:table width="95%" border="0">
 							<html:tr>

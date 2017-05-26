@@ -9,8 +9,8 @@
 			<VBox>
 				<html:img class="left_image" src="images/Bewerbungsfoto-s-w.jpg" alt="" width="80" height="96"></html:img>
 				<html:p></html:p>
-				<html:h2>Ausbildung
-				</html:h2>
+				<html:h3>Ausbildung
+				</html:h3>
 				<html:div class="text_small">
 					<html:table width="95%" border="0">
 						<html:tr>
@@ -36,8 +36,8 @@
 						</html:tr>
 					</html:table>
 				</html:div>
-				<html:h2>
-					Tätigkeiten</html:h2>
+				<html:h3>
+					Tätigkeiten</html:h3>
 				<html:div class="text_small">
 					<html:table width="95%" border="0">
 						<html:tr>

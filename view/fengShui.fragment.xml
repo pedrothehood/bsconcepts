@@ -7,9 +7,9 @@
 	<Panel>
 		<content>
 			<VBox>
-				<html:h2>
+				<html:h3>
 					<html:strong>Wohn- und Geschäftberatung</html:strong>
-				</html:h2>
+				</html:h3>
 				<html:div class="first_absatz">Es lohnt sich, unsere Träume bezüglich Wohn- und Geschäftsräumen zu verwirklichen.</html:div>
 				<html:div class="first_absatz">Das Leben wird durch mehr
 					<html:span class="farbe">Farbe</html:span>
