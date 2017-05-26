@@ -116,7 +116,7 @@ sap.ui.define([
 
 			var sObjectId = oEvent.getParameter("arguments").objectId;
 			//	this.getModel().metadataLoaded().then( function() {
-			/*	var sObjectPath = this.getModel().createKey("ZDEV_PORTALS", {  // Meine Analysen haben ergeben, dass Mandt=null ubergeben wird, ich konnte die Urs
+			/*	var sObjectPath = this.getModel().createKey("BSCONCEPTS", {  // Meine Analysen haben ergeben, dass Mandt=null ubergeben wird, ich konnte die Urs
         	 	                          // Ursache nicht herausfinden, der Unterschied zu anderen SEGW-Models ist, dass der Mandant in der Struktur ist!!!
 						LinkKey :  sObjectId
 					}); */

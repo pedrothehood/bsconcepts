@@ -62,7 +62,7 @@ sap.ui.define([
 
 					iShouldBeOnTheObjectNPage : function (iObjIndex) {
 						return this.waitFor(this.createAWaitForAnEntitySet({
-							entitySet : "ZDEV_PORTALS",
+							entitySet : "BSCONCEPTS",
 							success : function (aEntitySet) {
 								var sItemName = aEntitySet[iObjIndex].Name;
 

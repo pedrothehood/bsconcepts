@@ -164,7 +164,7 @@ sap.ui.define([
 
 					iRememberAnIdOfAnObjectThatsNotInTheList : function () {
 						return this.waitFor(this.createAWaitForAnEntitySet({
-							entitySet : "ZDEV_PORTALS",
+							entitySet : "BSCONCEPTS",
 							success : function (aEntityData) {
 								this.waitFor({
 									id : "list",
@@ -187,7 +187,7 @@ sap.ui.define([
 
 										var oCurrentItem = this.getContext().currentItem;
 										// Construct a binding path since the list item is not created yet and we only have the id.
-										oCurrentItem.bindingPath = "/" + oList.getModel().createKey("ZDEV_PORTALS", {
+										oCurrentItem.bindingPath = "/" + oList.getModel().createKey("BSCONCEPTS", {
 											LinkKey : sCurrentId
 										});
 										oCurrentItem.id = sCurrentId;
@@ -470,9 +470,9 @@ sap.ui.define([
 					theListShouldHaveAllEntries : function () {
 						var aAllEntities,
 							iExpectedNumberOfItems;
-						// retrieve all ZDEV_PORTALS to be able to check for the total amount
+						// retrieve all BSCONCEPTS to be able to check for the total amount
 						this.waitFor(this.createAWaitForAnEntitySet({
-							entitySet : "ZDEV_PORTALS",
+							entitySet : "BSCONCEPTS",
 							success : function (aEntityData) {
 								aAllEntities = aEntityData;
 							}

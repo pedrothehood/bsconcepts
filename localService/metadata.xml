@@ -17,7 +17,7 @@
                 <Property Name="LinkType" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Link-Typ" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
             </EntityType>
             <EntityContainer Name="ZR_MOBILE_PORTAL_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
-                <EntitySet Name="ZDEV_PORTALS" EntityType="ZR_MOBILE_PORTAL_SRV.ZdevPortal" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="BSCONCEPTS" EntityType="ZR_MOBILE_PORTAL_SRV.ZdevPortal" sap:pageable="false" sap:content-version="1"/>
             </EntityContainer>
             <atom:link
                 xmlns:atom="http://www.w3.org/2005/Atom" rel="self" href="./sap/ZR_MOBILE_PORTAL_SRV/$metadata"/>

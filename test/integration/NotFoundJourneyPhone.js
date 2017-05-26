@@ -28,7 +28,7 @@ sap.ui.define([
 
 		opaTest("Should see the not found master and detail page if an invalid object id has been called", function (Given, When, Then) {
 			// Arrangements
-			Given.iStartTheApp({ hash : "/ZDEV_PORTALS/SomeInvalidObjectId" });
+			Given.iStartTheApp({ hash : "/BSCONCEPTS/SomeInvalidObjectId" });
 
 			// Actions
 			When.onTheNotFoundPage.iLookAtTheScreen();

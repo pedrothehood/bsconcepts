@@ -111,7 +111,7 @@
 					]
 				},
 				{
-					"pattern": "ZDEV_PORTALS/{objectId}",
+					"pattern": "BSCONCEPTS/{objectId}",
 					"name": "object",
 					"target": [
 						"master",

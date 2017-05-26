@@ -116,14 +116,14 @@
 					"master"
 				]
 			}, {
-				"pattern": "ZDEV_PORTALS/{objectId}",
+				"pattern": "BSCONCEPTS/{objectId}",
 				"name": "object",
 				"target": [
 					"master",
 					"object"
 				]
 			}, {
-				"pattern": "ZDEV_PORTALS/KALENDER/{year}",
+				"pattern": "BSCONCEPTS/KALENDER/{year}",
 				"name": "calendar",
 				"target": [
 					"master",

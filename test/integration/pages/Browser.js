@@ -14,7 +14,7 @@ sap.ui.define([
 						return this.waitFor(this.createAWaitForAnEntitySet({
 							entitySet : "Objects",
 							success : function (aEntitySet) {
-								Opa5.getHashChanger().setHash("/ZDEV_PORTALS/" + aEntitySet[iObjIndex].LinkKey);
+								Opa5.getHashChanger().setHash("/BSCONCEPTS/" + aEntitySet[iObjIndex].LinkKey);
 							}
 						}));
 					},
@@ -23,7 +23,7 @@ sap.ui.define([
 						return this.waitFor({
 							success : function () {
 								var sObjectId = this.getContext().currentItem.id;
-								Opa5.getHashChanger().setHash("/ZDEV_PORTALS/" + sObjectId);
+								Opa5.getHashChanger().setHash("/BSCONCEPTS/" + sObjectId);
 							}
 						});
 					},
@@ -46,7 +46,7 @@ sap.ui.define([
 							success : function (aEntitySet) {
 								var oHashChanger = Opa5.getHashChanger(),
 									sHash = oHashChanger.getHash();
-								Opa5.assert.strictEqual(sHash, "ZDEV_PORTALS/" + aEntitySet[iObjIndex].LinkKey, "The Hash is not correct");
+								Opa5.assert.strictEqual(sHash, "BSCONCEPTS/" + aEntitySet[iObjIndex].LinkKey, "The Hash is not correct");
 							}
 						}));
 					},
@@ -57,7 +57,7 @@ sap.ui.define([
 								var sObjectId = this.getContext().currentItem.id,
 									oHashChanger = Opa5.getHashChanger(),
 									sHash = oHashChanger.getHash();
-								Opa5.assert.strictEqual(sHash, "ZDEV_PORTALS/" + sObjectId, "The Hash is not correct");
+								Opa5.assert.strictEqual(sHash, "BSCONCEPTS/" + sObjectId, "The Hash is not correct");
 							}
 						});
 					},
