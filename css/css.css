@@ -43,3 +43,5 @@
 	padding-top: 10px;
 	line-height: 120%;
 }
+/* Responsive Images */
+img, img.scale-with-grid { outline: 0; max-width: 100%; height: auto; }
