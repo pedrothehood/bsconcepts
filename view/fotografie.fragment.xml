@@ -21,7 +21,12 @@
 				<html:p>Für Ihren Wohn- oder Geschäftsbereich stellen wir nach Ihrem individuellen Wunsch Fotobilder zusammen.<html:br/>
 					Die Fotos können auf diverse Trägermaterialien wie Glas, Plexiglas, Kunststoff, Stoffe, usw. aufgebracht werden. Damit sind spezielle und
 					exklusive Effekte möglich.</html:p>
-			<html:p>	Lassen Sie sich durch unsere Fotogalerie inspirieren:</html:p><html:br/>
+			<html:p>	Lassen Sie sich durch unsere Fotogalerie inspirieren:</html:p>
+				<Link text="Fotogalerie..." press="goToItem">
+										<customData>
+											<core:CustomData key="LinkKey" value="KALENDER"/>
+										</customData>
+										</Link>
 			</VBox>
 		</content>
 	</Panel>
