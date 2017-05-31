@@ -24,6 +24,10 @@
 			"init_kalender": {
 				"uri": "data/kalender.json",
 				"type": "JSON"
+			},
+				"init_ausstellung": {
+				"uri": "data/ausstellung.json",
+				"type": "JSON"
 			}
 		},
 		"sourceTemplate": {
@@ -90,6 +94,10 @@
 			"kalender": {
 				"type": "sap.ui.model.json.JSONModel",
 				"dataSource": "init_kalender"
+			},
+				"ausstellung": {
+				"type": "sap.ui.model.json.JSONModel",
+				"dataSource": "init_ausstellung"
 			}
 
 		},
@@ -122,17 +130,22 @@
 					"master",
 					"object"
 				]
-				
 			}, 
-			
-			
-			
 			 {
 				"pattern": "BSCONCEPTS/AUSSTELLUNG/{objectId}",
 				"name": "ausstellung",
 				"target": [
 					"master",
 					"ausstellung"
+				]
+			}
+			,
+			 {
+				"pattern": "BSCONCEPTS/AUSSTELLUNG/{objectId}/KATALOG",
+				"name": "katalog",
+				"target": [
+					"master",
+					"katalog"
 				]
 			}
 			,
@@ -164,6 +177,11 @@
 				"calendar": {
 					"viewName": "Calendar",
 					"viewId": "calendar",
+					"viewLevel": 3
+				},
+				"katalog": {
+					"viewName": "Catalog",
+					"viewId": "catalog",
 					"viewLevel": 3
 				},
 				"detailObjectNotFound": {

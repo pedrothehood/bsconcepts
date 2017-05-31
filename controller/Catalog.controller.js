@@ -2,12 +2,11 @@
 sap.ui.define([
 	"ypglmasterdetailportal/controller/BaseController",
 	"sap/ui/model/json/JSONModel",
-	"ypglmasterdetailportal/model/formatter",
-	"sap/ui/Device"
-], function(BaseController, JSONModel, formatter,Device) {
+	"ypglmasterdetailportal/model/formatter"
+], function(BaseController, JSONModel, formatter) {
 	"use strict";
 
-	return BaseController.extend("ypglmasterdetailportal.controller.Ausstellung", {
+	return BaseController.extend("ypglmasterdetailportal.controller.Catalog", {
 
 		formatter: formatter,
 
@@ -24,20 +23,20 @@ sap.ui.define([
 				delay: 0
 			});
 
-			this.getRouter().getRoute("ausstellung").attachPatternMatched(this._onObjectMatched, this);
+			this.getRouter().getRoute("katalog").attachPatternMatched(this._onObjectMatched, this);
 
 			this.setModel(oViewModel, "detailView");
 			//	this.getOwnerComponent().getModel().metadataLoaded().then(this._onMetadataLoaded.bind(this));
 		},
 
-		goToKatalog: function(oEvent) {
+		goToItem: function(oEvent) {
 			var router = this.getRouter();
-			//var customData = oEvent.getSource().getCustomData()[0];
-				var bReplace = !Device.system.phone;
-		//	var customValue = customData.getValue();
-			router.navTo("katalog", {
-				objectId: "AUSSTELLUNG_01"
-			}, false);  // Korr. pgl
+			var customData = oEvent.getSource().getCustomData()[0];
+			var bReplace = jQuery.device.is.phone ? false : true;
+			var customValue = customData.getValue();
+			router.navTo("object", {
+				objectId: customValue
+			}, bReplace);
 			//console.log("hallo");
 			//alert(itemKey);	
 		},
@@ -75,20 +74,20 @@ sap.ui.define([
 		 * @private
 		 */
 		_onObjectMatched: function(oEvent) {
-							return;  /// Abkoppeln Detail
+			//				return;  /// Abkoppeln Detail
 			// Path ermitteln:
 			var oView = this.getView();
 			// oElementBinding = oView.getElementBinding();
-			var sPath = oEvent.getParameters().arguments.year;
+			var sPath = oEvent.getParameters().arguments.objectId;
 			var oResourceBundle = this.getResourceBundle();
 
 			// Objekt-Pfad aus Wert ermitteln:
-			var tab = oView.getModel("kalender").oData.kalender;
+			var tab = oView.getModel("ausstellung").oData.ausstellung;
 			var retIndex;
 
 			function findFirst(tab) {
 				for (var i = 0; i < tab.length; i++) {
-					if (sPath == tab[i].Jahr) {
+					if (sPath == tab[i].objectId) {
 						retIndex = i;
 						return i;
 					}
@@ -101,10 +100,10 @@ sap.ui.define([
 								if (obj.LinkKey == sPath) retIndex = index;
 							}
 						);*/
-			var path = '/kalender/' + retIndex + "/Monate";
+			var path = '/ausstellung/' + retIndex ;
 			//var oObject = oView.getModel().getObject(path);
 
-			var sObjectId = oEvent.getParameter("arguments").year;
+			var sObjectId = oEvent.getParameter("arguments").objectId;
 			//	this.getModel().metadataLoaded().then( function() {
 			/*	var sObjectPath = this.getModel().createKey("BSCONCEPTS", {  // Meine Analysen haben ergeben, dass Mandt=null ubergeben wird, ich konnte die Urs
         	 	                          // Ursache nicht herausfinden, der Unterschied zu anderen SEGW-Models ist, dass der Mandant in der Struktur ist!!!
@@ -112,10 +111,12 @@ sap.ui.define([
 					}); */
 			//	var sObjectPath = "DEV_PORTALS(Mandt='994',LinkKey='SAP-UI5-SDK')";
 			//	this._bindView("/" + sObjectId);
-			var listPath = '/kalender/' + retIndex;
-			//	this._bindView(path);
+			var listPath = '/ausstellung/' + retIndex;
 			this._bindView(listPath);
-			// Model nur für Einzelanzeige erstellen:
+			///// pgl this._bindView(listPath);
+			var data = this.getView().getModel("ausstellung").getData();
+			var modelData = data.ausstellung[retIndex];
+/*			// Model nur für Einzelanzeige erstellen:
 			var data = this.getView().getModel("kalender").getData();
 			var modelData = data.kalender[retIndex];
 
@@ -127,33 +128,20 @@ sap.ui.define([
 			var monatModel = new sap.ui.model.json.JSONModel();
 			monatModel.setData(modelData);
 
-			this.setModel(monatModel, "monatModel");
+			this.setModel(monatModel, "monatModel");*/
 
-			var oList = this.byId("MonatsListe");
-			//oList.bindItems("kalender>"+listPath);
-			//oList.bindElement(listPath);
+			//  var oList = this.byId("katalogListe");
+			// oList.bindElement({path:listPath,model:"ausstellung"});
+//			oList.getBindingContext("ausstellung").getObject()
 			var oViewModel = this.getModel("detailView");
-
+           //var context = oList.getBindingContext("ausstellung").getObject();
+           	var selectedAusstellungModel = new sap.ui.model.json.JSONModel();
+           	selectedAusstellungModel.setData(modelData);
+           	this.setModel(selectedAusstellungModel,"selectedAusstellungModel");
+           	
 			// If the view was not bound yet its not busy, only if the binding requests data it is set to busy again
 			oViewModel.setProperty("/busy", false);
 
-			// Immer erste Seite setzen:
-			var carousel = this.getView().byId("ausstellungCarousel");
-			var pages = carousel.getPages();
-			//	var length = carousel.getPages().length;
-			/*	if (length > 1){
-						carousel.setActivePage(pages[1]);  // auslösen pageChange
-						carousel.setActivePage(pages[0]);
-				}
-				else{*/
-			carousel.setActivePage(pages[0]);
-			//	}
-			// Text setzen:
-			var carouselImageLabel = this.getView().byId("ausstellungImageLabel");
-			if (carouselImageLabel) {
-				carouselImageLabel.setText(carousel.getPages()[0].getAlt());
-			}
-			//	}.bind(this));
 		},
 
 		/**
@@ -167,11 +155,11 @@ sap.ui.define([
 			// Set busy indicator during view binding
 			var oViewModel = this.getModel("detailView");
 
-			// If the view was not bound yet its not busy, only if the binding requests data it is set to busy again
+/*			// If the view was not bound yet its not busy, only if the binding requests data it is set to busy again
 			oViewModel.setProperty("/busy", false);
 			// Liste explizit binden
 			this.getView().bindElement({
-				path: sObjectPath,
+				path: sObjectPath, model:"ausstellung",
 				events: {
 					change: this._onBindingChange.bind(this),
 					dataRequested: function() {
@@ -181,12 +169,12 @@ sap.ui.define([
 						oViewModel.setProperty("/busy", false);
 					}
 				}
-			});
+			});*/
 		},
 
 		_onBindingChange: function() {
 			var oView = this.getView(),
-				oElementBinding = oView.getElementBinding();
+				oElementBinding = oView.getElementBinding("ausstellung");
 
 			// No data for the binding
 			if (!oElementBinding.getBoundContext()) {
@@ -197,16 +185,16 @@ sap.ui.define([
 				return;
 			}
 
-			var sPath = oElementBinding.getPath();
+			var sPath = oElementBinding.getPath("ausstellung");
 			var oResourceBundle = this.getResourceBundle();
 
 			// Objekt-Pfad aus Wert ermitteln:
-			var tab2 = oView.getModel("kalender").oData.kalender;
+			var tab2 = oView.getModel("ausstellung").oData.ausstellung;
 			var retIndex;
 
 			function findFirst(tab) {
 				for (var i = 0; i < tab.length; i++) {
-					if (sPath.substr(1) === tab[i].Jahr) {
+					if (sPath.substr(1) === tab[i].objectId) {
 						retIndex = i;
 						return i;
 					}
@@ -220,8 +208,8 @@ sap.ui.define([
 					}
 				);*/
 			//	var path = '/Links/' + retIndex;
-			var path = oView.getElementBinding().getPath();
-			var oObject = oView.getModel("kalender").getObject(sPath);
+			var path = oView.getElementBinding("ausstellung").getPath();
+			var oObject = oView.getModel("ausstellung").getObject(sPath);
 
 			//var	oObject = oView.getModel().getObject(sPath);
 			//	var sObjectId = oObject.LinkKey;
@@ -252,8 +240,8 @@ sap.ui.define([
 			// Restore original busy indicator delay for the detail view
 			oViewModel.setProperty("/delay", iOriginalViewBusyDelay);
 		},
-		onPageChange: function(oEvent) {
-			var carousel = this.getView().byId("ausstellungCarousel");
+/*		onPageChange: function(oEvent) {
+			var carousel = this.getView().byId("calendarCarousel");
 			var activeCarouselId = oEvent.getSource().getActivePage(); // gibt nur Id!!!
 			var activeCarouselPage = null;
 			//var pages = carousel.getPages();
@@ -263,20 +251,22 @@ sap.ui.define([
 					activeCarouselPage = carousel.getPages()[i];
 				}
 			}
-			var carouselImageLabel = this.getView().byId("ausstellungImageLabel");
+			var carouselImageLabel = this.getView().byId("carouselImageLabel");
 
 			if (carouselImageLabel && activeCarouselPage) {
 				carouselImageLabel.setText(activeCarouselPage.getAlt());
 				//alert("hallo");
 			}
-			/*			pageChanged: function(){
-						alert("hallo");
-					}*/
-		},
-		sendMail: function(){
+		 
+		},*/
+			sendMail: function(){
 			this.getOwnerComponent().sendMail();
 		//	 sap.m.URLHelper.triggerEmail("peter.gloor@mgb.ch", "Webseite", "Hallo Barbara");
-		}
+		},
+			onNavBack : function() {
+				alert("back Catalog");
+				history.go(-1);
+			}
 	});
 
 });

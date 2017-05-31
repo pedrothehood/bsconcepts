@@ -1,0 +1,95 @@
+<mvc:View controllerName="ypglmasterdetailportal.controller.Catalog" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc"
+	xmlns:semantic="sap.m.semantic" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout">
+	<semantic:DetailPage id="page" navButtonPress="onNavBack" showNavButton="{device>/system/phone}" title="Verzeichnis"
+		busy="{detailView>/busy}" busyIndicatorDelay="{detailView>/delay}">
+		<semantic:content>
+			<Panel>
+			<ObjectHeader id="objectHeader" title="Fotoverzeichnis" numberUnit="{LinkType}"></ObjectHeader>
+		
+			<!--	<Text text="A"></Text>
+			<Text text="{ausstellung>/ausstellung>Front}"></Text>ausstellung>/
+			<Text text="B"></Text>
+			<Text text="{ausstellung>/ausstellung>Front}"></Text>
+			<Text text="C"></Text> -->
+	<!--		<List class="sapContrast sapContrastPlus" headerText="Bilder" id="katalogListe" items="{path: 'selectedAusstellungModel>/Werke' }">
+				<items>
+					<StandardListItem title="{selectedAusstellungModel>name}" iconDensityAware="false" iconInset="false"/>
+				</items>
+			</List>-->
+			<Table class="navTableControlLayout" id="catalogTable" items="{path: 'selectedAusstellungModel>/Werke' }">
+				
+				<headerToolbar id="catalogTable_headerToolbar">
+					<Toolbar id="tableToolbar">
+						<Label class="sapMH4FontSize" id="catalogTitle" text="{selectedAusstellungModel>/Text}" visible="true"/>
+						<ToolbarSpacer id="toolbarSpacer"/>
+					</Toolbar>
+				</headerToolbar>
+				<columns id="catalogTable_columns">
+					<Column hAlign="Left" id="catalogTable_col1">
+						<header id="catalogTable_col1_header">
+							<Label id="catalogTable_col1_label1" text="Name"/>
+						</header>
+					</Column>
+					<Column hAlign="Left" id="catalogTable_col1a">
+						<header id="catalogTable_col1a_header">
+							<Label id="catalogTable_col1_label1a" text="Text"/>
+						</header>
+					</Column>
+					<Column hAlign="Left" id="catalogTable_col2">
+						<header id="catalogTable_col2_header">
+							<Label id="catalogTable_col1_label2" text="Preis (CHF)"/>
+						</header>
+					</Column>
+					<Column demandPopin="true" minScreenWidth="Small" popinDisplay="Inline" hAlign="Left" id="catalogTable_col3">
+						<header id="catalogTable_col3_header">
+							<Label id="catalogTable_col1_label3" text="Format"/>
+						</header>
+					</Column>
+					<Column demandPopin="true" minScreenWidth="Small" popinDisplay="Inline" hAlign="Left" id="catalogTable_col4">
+						<header id="catalogTable_col4_header">
+							<Label id="catalogTable_col1_label4" text="Material"/>
+						</header>
+					</Column>
+				</columns>
+				<ColumnListItem class="navTableItemLayout" id="columnListItem" vAlign="Middle">
+					<cells id="columnListItem_cells">
+						<Text id="columnListItem_cell_1" text="{selectedAusstellungModel>name}"></Text>
+						<Text id="columnListItem_cell_1a" text="{selectedAusstellungModel>text}"></Text>
+						<Text id="columnListItem_cell_2" text="{selectedAusstellungModel>preis}"></Text>
+						<Text id="columnListItem_cell_3" text="{selectedAusstellungModel>format}"></Text>
+						<Text id="columnListItem_cell_4" text="{selectedAusstellungModel>material}"></Text>
+					</cells>
+				</ColumnListItem>
+			</Table>
+			<!--			<List class="sapContrast sapContrastPlus" headerText="Bilder 2" id="katalogListe2" items="{path: 'ausstellung>/ausstellung/Werke' }">
+				<items>
+					<StandardListItem title="{ausstellung>name}" iconDensityAware="false" iconInset="false"
+					 />
+				</items>
+			</List>-->
+			<!--	<Text text="{monatModel>/Monate/0/Text}"></Text>-->
+			<!--<l:VerticalLayout class="sapUiSmallMargin">
+				<Toolbar>
+					<ToolbarSpacer/>
+					<Label id="carouselImageLabel"  text="Bildertext"></Label>
+					<ToolbarSpacer/>
+				</Toolbar>
+				<Carousel id="calendarCarousel" class="sapUiResponsivePadding" loop="true" pages="{ path: 'monatModel>/Monate' }" pageChanged="onPageChange">
+					<pages>
+						<Image src="images/kalender/{monatModel>Jahr}/monate/{monatModel>monat}" alt="{monatModel>alt}"/>
+					</pages>
+				</Carousel>
+			</l:VerticalLayout>-->
+			<!-- Liste zum Testen			<List class="sapContrast sapContrastPlus" headerText="{monatModel>/Monate/0/Text}" id="MonatsListe" items="{path: 'monatModel>/Monate' }">
+				<items>
+					<StandardListItem title="{monatModel>monat}" iconDensityAware="false" iconInset="false"
+						icon="images/kalender/{monatModel>Jahr}/monate/{monatModel>monat}"/>
+				</items>
+			</List>-->
+			</Panel>
+		</semantic:content>
+		<semantic:sendEmailAction>
+			<semantic:SendEmailAction id="shareEmail" press="sendMail"/>
+		</semantic:sendEmailAction>
+	</semantic:DetailPage>
+</mvc:View>

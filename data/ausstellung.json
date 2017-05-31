@@ -1,0 +1,71 @@
+{
+	"ausstellung": [{
+		"objectId": "AUSSTELLUNG_01",
+		"Jahr": "2017",
+		"Front": "Front-Text der Ausstellung",
+		"Text": "Neuseeland 2017",
+		"Ort": "asdf",
+		"Dauer": "Oktober bis Dezember",
+		"Werke": [{
+			"name": "Zauberwald 1",
+			"text": "Farne mit 121 Blättern",
+			"img": "xxxx.jpg",
+			"alt": "xxxx",
+			"preis": 45.20,
+			"format": "30 x 70 cm",
+			"material": "Leinen"
+		}, {
+			"name": "Zauberwald 2",
+			"text": "Farne mit xxx121 Blättern",
+			"img": "yyyy.jpg",
+			"alt": "yyyy",
+			"preis": 23.50,
+			"format": "100 x 80 cm",
+			"material": "Papier"
+		}, {
+			"name": "Baum",
+			"text": "grosser Baum im Gegenlicht mit Grün",
+			"img": "zzzz.jpg",
+			"alt": "zzzz",
+			"preis": 17.50,
+			"format": "45 x 45 cm",
+			"material": "auf Holz aufgezogen"
+		}]
+	},
+	
+	{
+			"objectId": "AUSSTELLUNG_TEST_XXXX",
+		"Jahr": "2018",
+		"Front": "Front-Text 2 der Ausstellung",
+		"Text": "Neuseeland 2017",
+		"Ort": "asdf",
+		"Dauer": "Oktober bis Dezember",
+		"Werke": [{
+			"name": "Zauberwald 1",
+			"text": "Farne 1",
+			"img": "xxxx.jpg",
+			"alt": "xxxx",
+			"preis": 45.20,
+			"format": "30 x 70 cm",
+			"material": "Leinen"
+		}, {
+			"name": "Zauberwald 2",
+			"text": "Farne 2",
+			"img": "yyyy.jpg",
+			"alt": "yyyy",
+			"preis": 23.50,
+			"format": "100 x 80 cm",
+			"material": "Papier"
+		}, {
+			"name": "Baum",
+			"text": "grosser Baum",
+			"img": "zzzz.jpg",
+			"alt": "zzzz",
+			"preis": 17.50,
+			"format": "45 x 45 cm",
+			"material": "auf Holz aufgezogen"
+		}]
+	}
+	
+	]
+}

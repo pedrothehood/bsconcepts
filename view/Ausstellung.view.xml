@@ -13,8 +13,12 @@
 				<Image src="images/ausstellung/2017_neuseeland/land-of-the-long-white-cloud_small.jpg" alt="Land of the long white cloud"/>
 				<Text text="Von Oktober bis Dezember findet eine Ausstellung in Locarno im Caffe Bartolomeo,Via Bartolomeo Rusca 8, 6600 Locarno statt."></Text>
 				<l:VerticalLayout class="sapUiSmallMargin">
-				 
-					<Text text="Eine Reise nach Neuseeland ..."></Text>
+		 
+								<Link text="zum Bilderverzeichnis..." press="goToKatalog">
+									<!--<customData>
+										<core:CustomData key="LinkKey" value="PROZESSBEGLEITUNG"/>
+									</customData>-->
+								</Link>
 					<!--	<Carousel id="calendarCarousel" class="sapUiResponsivePadding" loop="true" pages="{ path: 'monatModel>/Monate' }" pageChanged="onPageChange">
 					<pages>
 						<Image src="images/kalender/{monatModel>Jahr}/monate/{monatModel>monat}" alt="{monatModel>alt}"/>
