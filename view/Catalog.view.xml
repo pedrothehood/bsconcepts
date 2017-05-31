@@ -4,7 +4,7 @@
 		busy="{detailView>/busy}" busyIndicatorDelay="{detailView>/delay}">
 		<semantic:content>
 			<Panel>
-			<ObjectHeader id="objectHeader" title="Fotoverzeichnis" numberUnit="{LinkType}"></ObjectHeader>
+		<!--	<ObjectHeader id="objectHeader" title="Fotoverzeichnis" numberUnit="{LinkType}"></ObjectHeader>-->
 		
 			<!--	<Text text="A"></Text>
 			<Text text="{ausstellung>/ausstellung>Front}"></Text>ausstellung>/
@@ -35,7 +35,7 @@
 							<Label id="catalogTable_col1_label1a" text="Text"/>
 						</header>
 					</Column>
-					<Column hAlign="Left" id="catalogTable_col2">
+					<Column hAlign="Right" id="catalogTable_col2">
 						<header id="catalogTable_col2_header">
 							<Label id="catalogTable_col1_label2" text="Preis (CHF)"/>
 						</header>

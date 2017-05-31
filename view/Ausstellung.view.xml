@@ -5,16 +5,18 @@
 		<semantic:content>
 			<Panel>
 				<html:h3>
-					<html:span>New Zealand</html:span>
+					<html:span>New Zealand</html:span><html:span> </html:span> <html:span class="spacer"> </html:span><Image src="images/ausstellung/2017_neuseeland/Neuseeland_50.jpg"></Image>
 				</html:h3>
 				<html:h4>
 					<html:span>"Land of the long white cloud"</html:span>
 				</html:h4>
+				<!--<html:img src="images/ausstellung/2017_neuseeland/Neuseeland_50.jpg"></html:img>-->
 				<Image src="images/ausstellung/2017_neuseeland/land-of-the-long-white-cloud_small.jpg" alt="Land of the long white cloud"/>
-				<Text text="Von Oktober bis Dezember findet eine Ausstellung in Locarno im Caffe Bartolomeo,Via Bartolomeo Rusca 8, 6600 Locarno statt."></Text>
-				<l:VerticalLayout class="sapUiSmallMargin">
+				<Text class="sapUiTinyMarginBottom"  text="Von Oktober bis Dezember findet eine Ausstellung in Locarno im Caffè Bartolomeo,Via Bartolomeo Rusca 8, 6600 Locarno statt."></Text>
+	
+				<!--<l:VerticalLayout class="sapUiSmallMargin">-->
 		 
-								<Link text="zum Bilderverzeichnis..." press="goToKatalog">
+								<Link text="--> zum Bilderverzeichnis..." press="goToKatalog">
 									<!--<customData>
 										<core:CustomData key="LinkKey" value="PROZESSBEGLEITUNG"/>
 									</customData>-->
@@ -24,7 +26,7 @@
 						<Image src="images/kalender/{monatModel>Jahr}/monate/{monatModel>monat}" alt="{monatModel>alt}"/>
 					</pages>
 				</Carousel>-->
-				</l:VerticalLayout>
+		<!--		</l:VerticalLayout>-->
 				<!-- Liste zum Testen			<List class="sapContrast sapContrastPlus" headerText="{monatModel>/Monate/0/Text}" id="MonatsListe" items="{path: 'monatModel>/Monate' }">
 				<items>
 					<StandardListItem title="{monatModel>monat}" iconDensityAware="false" iconInset="false"
