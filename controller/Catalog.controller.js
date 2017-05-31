@@ -264,7 +264,6 @@ sap.ui.define([
 		//	 sap.m.URLHelper.triggerEmail("peter.gloor@mgb.ch", "Webseite", "Hallo Barbara");
 		},
 			onNavBack : function() {
-				alert("back Catalog");
 				history.go(-1);
 			}
 	});
