@@ -1,6 +1,6 @@
 <mvc:View controllerName="ypglmasterdetailportal.controller.Detail" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc"
 	xmlns:semantic="sap.m.semantic" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:core="sap.ui.core">
-	<semantic:DetailPage id="page" navButtonPress="onNavBack" showNavButton="{device>/system/phone}" title="{Text}"
+	<semantic:DetailPage id="page" navButtonPress="onNavBack" showNavButton="{device>/system/phone}" title="{path: 'Text' , formatter: 'ypglmasterdetailportal.util.Formatter.i19n'}"
 		busy="{detailView>/busy}" busyIndicatorDelay="{detailView>/delay}">
  	<semantic:content> 
 		<!--	<Toolbar title="{Text}" ></Toolbar>-->

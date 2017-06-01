@@ -62,7 +62,7 @@
 					<ObjectListItem
 						type="{= ${device>/system/phone} ? 'Active' : 'Inactive'}"
 						press="onSelectionChange"
-						title="{Text}"
+						title="{path: 'Text' , formatter: 'ypglmasterdetailportal.util.Formatter.i19n'}"
 						numberUnit="{LinkType}">
 					</ObjectListItem>
 				

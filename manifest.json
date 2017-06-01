@@ -28,6 +28,10 @@
 				"init_ausstellung": {
 				"uri": "data/ausstellung.json",
 				"type": "JSON"
+			},
+				"init_sprache": {
+				"uri": "data/sprache.json",
+				"type": "JSON"
 			}
 		},
 		"sourceTemplate": {
@@ -98,6 +102,11 @@
 				"ausstellung": {
 				"type": "sap.ui.model.json.JSONModel",
 				"dataSource": "init_ausstellung"
+			}
+			,
+				"sprache": {
+				"type": "sap.ui.model.json.JSONModel",
+				"dataSource": "init_sprache"
 			}
 
 		},

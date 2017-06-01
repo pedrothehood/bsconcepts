@@ -1,3 +1,4 @@
+jQuery.sap.require("ypglmasterdetailportal.util.Formatter");
 sap.ui.define([
 		"sap/ui/core/UIComponent",
 		"sap/ui/Device",
@@ -33,8 +34,16 @@ sap.ui.define([
 
 				// create the views based on the url/hash
 				this.getRouter().initialize();
+				ypglmasterdetailportal.util.Formatter.component = this;
 			},
-
+            i19n: function(param, arr) {
+            	// Leerzeichen aus param nehmen:
+            if (param){
+              param = param.replace(/\s/g, "");	
+            } 
+            var oBundle = this.getModel("i18n").getResourceBundle();
+            return arr == undefined ?  oBundle.getText(param) : oBundle.getText(param, arr);
+            },
 			/**
 			 * The component is destroyed by UI5 automatically.
 			 * In this method, the ListSelector and ErrorHandler are destroyed.

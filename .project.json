@@ -1,0 +1,82 @@
+{
+ 
+
+
+
+
+
+
+  "basevalidator": {
+    "validators": [
+      {
+        "validatorID": "jsValidator",
+        "configuration": {
+          "eslintConfig": {
+            "rules": {
+              "block-scoped-var": 2,
+              "brace-style": 0,
+              "camelcase": 0,
+              "comma-spacing": 0,
+              "consistent-return": 0,
+              "curly": [
+                0,
+                "all"
+              ],
+              "global-strict": 0,
+              "indent": 0,
+              "key-spacing": 0,
+              "new-cap": 0,
+              "no-console": 0,
+              "no-empty": 0,
+              "no-eval": 1,
+              "no-lonely-if": 0,
+              "no-mixed-spaces-and-tabs": 0,
+              "no-multi-spaces": 0,
+              "no-nested-ternary": 0,
+              "no-shadow": 1,
+              "no-undefined": 0,
+              "no-unused-vars": [
+                2,
+                {
+                  "vars": "local",
+                  "args": "none"
+                }
+              ],
+              "no-use-before-define": 0,
+              "radix": 0,
+              "semi": 0,
+              "semi-spacing": 0,
+              "space-after-keywords": 0,
+              "space-infix-ops": 0,
+              "space-return-throw-case": 0,
+              "space-unary-ops": 0,
+              "strict": 0,
+              "eqeqeq": 0,
+              "no-trailing-spaces": 0,
+              "quotes": [
+                0,
+                "double"
+              ],
+              "wrap-iife": [
+                2,
+                "any"
+              ]
+            },
+            "globals": {
+              "ypglmasterdetailportal": false,
+              "migros": false,
+              "window": false,
+              "document": false,
+              "zrt_library": false,
+              "retail": false,
+              "KeyboardDemo": false,
+              "cordova": false
+            }
+          },
+          "rulesExt": {}
+        }
+      }
+    ],
+    "services": "jsValidator"
+  }
+}
