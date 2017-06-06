@@ -1,0 +1,39 @@
+<mvc:View controllerName="ypglmasterdetailportal.controller.Fotografie" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc"
+	xmlns:semantic="sap.m.semantic" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout">
+	<semantic:DetailPage id="page" navButtonPress="onNavBack" showNavButton="{device>/system/phone}" title="{path: 'Text' , formatter: 'ypglmasterdetailportal.util.Formatter.i19n'}"
+		busy="{detailView>/busy}" busyIndicatorDelay="{detailView>/delay}">
+		<semantic:content>
+			<Panel>
+			<VBox>
+				<html:h3>
+					<html:span>Fotografie</html:span>
+				</html:h3>
+				<html:p>Durch den geschärften Blick auf Details, mehr Farben, mehr Formen und mehr
+					<html:span class="wide">
+						<html:span class="farbe">F</html:span>a
+						<html:span class="licht">n</html:span>ta
+						<html:span class="farbe2">s</html:span>ie</html:span>, bringen wir mehr Freude in unser Leben.</html:p>
+				<html:h3>
+					<html:span>Angebot</html:span>
+				</html:h3>
+				<html:p>Für Ihren Wohn- oder Geschäftsbereich stellen wir nach Ihrem individuellen Wunsch Fotobilder zusammen.<html:br/>
+					Die Fotos können auf diverse Trägermaterialien wie Glas, Plexiglas, Kunststoff, Stoffe, usw. aufgebracht werden. Damit sind spezielle und
+					exklusive Effekte möglich.</html:p>
+			<html:p>	Lassen Sie sich durch unsere Fotogalerie inspirieren:</html:p>
+				<Link text="Fotogalerie..." press="goToItem">
+										<customData>
+												<core:CustomData key="route"   value="kalenderliste"/>
+											<core:CustomData key="LinkKey" value="KALENDER"/>
+										</customData>
+										</Link>
+			</VBox>
+			</Panel>
+		</semantic:content>
+		<semantic:sendEmailAction>
+			<semantic:SendEmailAction id="shareEmail" press="sendMail"/>
+		</semantic:sendEmailAction>
+		<!--	<semantic:sendEmailAction>
+			<semantic:SendEmailAction id="shareEmail" press="onShareEmailPress"/>
+		</semantic:sendEmailAction>-->
+	</semantic:DetailPage>
+</mvc:View>

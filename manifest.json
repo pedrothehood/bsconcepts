@@ -147,6 +147,73 @@
 					"master",
 					"ausstellung"
 				]
+			}, 
+			 {
+				"pattern": "BSCONCEPTS/HOME/{objectId}",
+				"name": "home",
+				"target": [
+					"master",
+					"home"
+				]
+			}, 
+			 {
+				"pattern": "BSCONCEPTS/KALENDERLISTE/{objectId}",
+				"name": "kalenderliste",
+				"target": [
+					"master",
+					"kalenderliste"
+				]
+			}, 
+			 {
+				"pattern": "BSCONCEPTS/FENGSHUI/{objectId}",
+				"name": "fengShui",
+				"target": [
+					"master",
+					"fengShui"
+				]
+			}
+			, 
+			 {
+				"pattern": "BSCONCEPTS/FOTOGRAFIE/{objectId}",
+				"name": "fotografie",
+				"target": [
+					"master",
+					"fotografie"
+				]
+			}
+			,
+			{
+				"pattern": "BSCONCEPTS/KONTAKT/{objectId}",
+				"name": "kontakt",
+				"target": [
+					"master",
+					"kontakt"
+				]
+			}
+			,
+				{
+				"pattern": "BSCONCEPTS/LINKS/{objectId}",
+				"name": "links",
+				"target": [
+					"master",
+					"links"
+				]
+			}			,
+				{
+				"pattern": "BSCONCEPTS/PROZESSBEGLEITUNG/{objectId}",
+				"name": "prozessbegleitung",
+				"target": [
+					"master",
+					"prozessbegleitung"
+				]
+			}			,
+				{
+				"pattern": "BSCONCEPTS/PROFIL/{objectId}",
+				"name": "profil",
+				"target": [
+					"master",
+					"profil"
+				]
 			}
 			,
 			 {
@@ -183,10 +250,50 @@
 					"viewId": "ausstellung",
 					"viewLevel": 2
 				},
+					"home": {
+					"viewName": "Home",
+					"viewId": "home",
+					"viewLevel": 2
+				},
+					"kalenderliste": {
+					"viewName": "Kalenderliste",
+					"viewId": "kalenderliste",
+					"viewLevel": 2
+				},
+					"fengShui": {
+					"viewName": "FengShui",
+					"viewId": "fengShui",
+					"viewLevel": 2
+				},
+					"fotografie": {
+					"viewName": "Fotografie",
+					"viewId": "fotografie",
+					"viewLevel": 2
+				},
 				"calendar": {
 					"viewName": "Calendar",
 					"viewId": "calendar",
 					"viewLevel": 3
+				},
+					"kontakt": {
+					"viewName": "Kontakt",
+					"viewId": "kontakt",
+					"viewLevel": 2
+				},
+					"links": {
+					"viewName": "Links",
+					"viewId": "links",
+					"viewLevel": 2
+				},
+					"profil": {
+					"viewName": "Profil",
+					"viewId": "profil",
+					"viewLevel": 2
+				},
+					"prozessbegleitung": {
+					"viewName": "Prozessbegleitung",
+					"viewId": "prozessbegleitung",
+					"viewLevel": 2
 				},
 				"katalog": {
 					"viewName": "Catalog",

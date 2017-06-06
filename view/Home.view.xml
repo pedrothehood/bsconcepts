@@ -1,0 +1,124 @@
+<mvc:View controllerName="ypglmasterdetailportal.controller.Home" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc"
+	xmlns:semantic="sap.m.semantic" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout">
+	<semantic:DetailPage id="page" navButtonPress="onNavBack" showNavButton="{device>/system/phone}" title="{path: 'Text' , formatter: 'ypglmasterdetailportal.util.Formatter.i19n'}"
+		busy="{detailView>/busy}" busyIndicatorDelay="{detailView>/delay}">
+		<semantic:content>
+			<Panel>
+		<VBox>
+				<!--<FormattedText id="formattedTextHome"   ></FormattedText> -->
+				<html:h3>
+					<html:span>Prozessbegleitung / Coaching 
+					</html:span>
+				</html:h3>
+				<html:div class="home_absatz">
+					<html:table width="95%" border="0">
+						<html:tr>
+							<html:td class="first">&#8226;</html:td>
+							<html:td>
+								Wir lernen unsere Bedürfnisse und Handlungen besser verstehen.</html:td>
+						</html:tr>
+						<html:tr>
+							<html:td class="first">&#8226;</html:td>
+							<html:td>Wir werden uns den Veränderungs-Prozessen bewusst.</html:td>
+						</html:tr>
+						<html:tr>
+							<html:td class="first"></html:td>
+							<html:td >
+								<Link text="mehr..." press="goToItem">
+									<customData>
+										<core:CustomData key="route"   value="prozessbegleitung"/>
+										<core:CustomData key="LinkKey" value="PROZESSBEGLEITUNG"/>
+									</customData>
+								</Link>
+							</html:td>
+						</html:tr>
+					</html:table>
+					<html:h3>
+						<html:span>Einrichten + Gestalten von Geschäfts- und Privaträumen</html:span>
+					</html:h3>
+					<html:div class="home_absatz">
+						<html:table width="95%" border="0">
+							<html:tr>
+								<html:td class="first">&#8226;</html:td>
+								<html:td>
+									die eigenen Wohn- oder Geschäftsraum-Träume erfüllen</html:td>
+							</html:tr>
+							<html:tr>
+								<html:td class="first" style="vertical-align:bottom">&#8226;</html:td>
+								<html:td>
+									mehr
+									<html:span style="line-height:120%" class="farbe">
+										Farbe</html:span>, mehr
+									<html:span class="licht">
+										Licht</html:span>, mehr
+									<html:span class="mut">
+										Mut</html:span>
+								</html:td>
+							</html:tr>
+							<html:tr>
+								<html:td class="first">&#8226;</html:td>
+								<html:td>weniger ist manchmal mehr
+								</html:td>
+							</html:tr>
+							<html:tr>
+								<html:td class="first"></html:td>
+								<html:td >
+									<Link text="mehr..." press="goToItem">
+										<customData>
+												<core:CustomData key="route"   value="fengShui"/>
+											<core:CustomData key="LinkKey" value="FENG_SHUI"/>
+										</customData>
+									</Link>
+								</html:td>
+							</html:tr>
+						</html:table>
+					</html:div>
+					<html:h3>
+						<html:span>Fotografie</html:span>
+					</html:h3>
+					<html:div class="home_absatz">
+						<html:table width="95%" border="0">
+							<html:tr>
+								<html:td class="first">&#8226;</html:td>
+								<html:td>mehr Freude ins Leben bringen</html:td>
+							</html:tr>
+							<html:tr>
+								<html:td class="first">&#8226;</html:td>
+								<html:td>
+									mehr Blick auf Details</html:td>
+							</html:tr>
+							<html:tr>
+								<html:td class="first">&#8226;</html:td>
+								<html:td>mehr Farbe, Formen und
+									<html:span class="wide">
+										<html:span class="farbe">F</html:span>a
+										<html:span class="licht">n</html:span>ta
+										<html:span class="farbe2">s</html:span>ie
+									</html:span>
+								</html:td>
+							</html:tr>
+							<html:tr>
+								<html:td class="first"></html:td>
+								<html:td >
+									<Link text="mehr..." press="goToItem">
+										<customData>
+												<core:CustomData key="route"   value="fotografie"/>
+											<core:CustomData key="LinkKey" value="FOTOGRAFIE"/>
+										</customData>
+									</Link>
+								</html:td>
+							</html:tr>
+						</html:table>
+					</html:div>
+				</html:div>
+			</VBox>
+			</Panel>
+		</semantic:content>
+		<semantic:sendEmailAction>
+			<semantic:SendEmailAction id="shareEmail" press="sendMail"/>
+		</semantic:sendEmailAction>
+		<!--	<semantic:sendEmailAction>
+			<semantic:SendEmailAction id="shareEmail" press="onShareEmailPress"/>
+		</semantic:sendEmailAction>-->
+	</semantic:DetailPage>
+</mvc:View>

@@ -1,0 +1,50 @@
+<mvc:View controllerName="ypglmasterdetailportal.controller.Links" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:semantic="sap.m.semantic"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout">
+	<semantic:DetailPage id="page" navButtonPress="onNavBack" showNavButton="{device>/system/phone}"
+		title="{path: 'Text' , formatter: 'ypglmasterdetailportal.util.Formatter.i19n'}" busy="{detailView>/busy}"
+		busyIndicatorDelay="{detailView>/delay}">
+		<semantic:content>
+			<Panel>
+				<VBox>
+					<html:h3>
+						<html:span>Links</html:span>
+					</html:h3>
+					<html:div class="text_small">
+						<html:table width="95%" border="0">
+							<html:tr>
+								<html:td>Harmonie mit Bogenschiessen Bogenclub Suhrental</html:td>
+							</html:tr>
+							<html:tr>
+								<html:td>
+									<html:a href="http://www.bc-suhrental.ch">Bogenclub Suhrental</html:a>
+								</html:td>
+							</html:tr>
+							<html:tr>
+								<html:td>Informatikberatung Wehrli</html:td>
+							</html:tr>
+							<html:tr>
+								<html:td>
+									<html:a href="http://www.wehrli-beratung.ch/">Wehrli Beratung</html:a>
+								</html:td>
+							</html:tr>
+							<html:tr>
+								<html:td>Stilberatung mit Style and Go</html:td>
+							</html:tr>
+							<html:tr>
+								<html:td>
+									<html:a href="http://www.style-and-go.com/">Style and Go</html:a>
+								</html:td>
+							</html:tr>
+						</html:table>
+					</html:div>
+				</VBox>
+			</Panel>
+		</semantic:content>
+		<semantic:sendEmailAction>
+			<semantic:SendEmailAction id="shareEmail" press="sendMail"/>
+		</semantic:sendEmailAction>
+		<!--	<semantic:sendEmailAction>
+			<semantic:SendEmailAction id="shareEmail" press="onShareEmailPress"/>
+		</semantic:sendEmailAction>-->
+	</semantic:DetailPage>
+</mvc:View>

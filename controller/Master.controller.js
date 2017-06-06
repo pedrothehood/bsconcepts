@@ -55,10 +55,15 @@ sap.ui.define([
 					}.bind(this)
 				});
 
-				this.getRouter().getRoute("master").attachPatternMatched(this._onMasterMatched, this);
+				this.getRouter().getRoute("master").attachPatternMatched(this._onMasterMatched, this);	
+				this.getRouter().attachRouteMatched(this._onMatched, this);
 				this.getRouter().attachBypassed(this.onBypassed, this);
 			},
-
+           _onMatched: function(oEvent){
+           	 var oList = this.getView().byId("list");
+           	 var items = oList.getItems();
+           	 
+           },
 			/* =========================================================== */
 			/* event handlers                                              */
 			/* =========================================================== */

@@ -1,0 +1,27 @@
+<mvc:View controllerName="ypglmasterdetailportal.controller.Kalenderliste" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc"
+	xmlns:semantic="sap.m.semantic" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout">
+	<semantic:DetailPage id="page" navButtonPress="onNavBack" showNavButton="{device>/system/phone}" title="{path: 'Text' , formatter: 'ypglmasterdetailportal.util.Formatter.i19n'}"
+		busy="{detailView>/busy}" busyIndicatorDelay="{detailView>/delay}">
+		<semantic:content>
+			<Panel>
+				<VBox>
+			<!--	<html:h2>
+					<html:span>Kalenderfotos</html:span>
+				</html:h2>-->
+				<List    headerText="Kalender" id="kalenderList" items="{ path: 'kalender>/kalender' }"  >
+					<items>
+						<StandardListItem title=" {kalender>Jahr}" description="{kalender>Text}" icon="images/kalender/{kalender>Jahr}/front/{kalender>Front}"
+							iconDensityAware="false" iconInset="false" press="onCalenderKlick" type="Active"/>
+					</items>
+				</List>
+			</VBox>
+			</Panel>
+		</semantic:content>
+		<semantic:sendEmailAction>
+			<semantic:SendEmailAction id="shareEmail" press="sendMail"/>
+		</semantic:sendEmailAction>
+		<!--	<semantic:sendEmailAction>
+			<semantic:SendEmailAction id="shareEmail" press="onShareEmailPress"/>
+		</semantic:sendEmailAction>-->
+	</semantic:DetailPage>
+</mvc:View>

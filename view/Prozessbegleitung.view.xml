@@ -1,0 +1,50 @@
+<mvc:View controllerName="ypglmasterdetailportal.controller.Prozessbegleitung" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc"
+	xmlns:semantic="sap.m.semantic" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout">
+	<semantic:DetailPage id="page" navButtonPress="onNavBack" showNavButton="{device>/system/phone}" title="{path: 'Text' , formatter: 'ypglmasterdetailportal.util.Formatter.i19n'}"
+		busy="{detailView>/busy}" busyIndicatorDelay="{detailView>/delay}">
+		<semantic:content>
+			<Panel>
+			<VBox>
+				<!--<FormattedText id="formattedTextHome"   ></FormattedText> -->
+				<html:h3>
+					<html:span>Prozessbegleitung / Coaching
+					</html:span>
+				</html:h3>
+				<html:div class="first_absatz">
+					Wir werden uns den Veränderungs-Prozesse bewusst und verstehen uns selber wie auch andere besser.</html:div>
+				<html:div class="first_absatz">
+					Wir werden tagtäglich herausgefordert und müssen uns auf Veränderungen einlassen. Veränderungen können im ersten Moment Angst und
+					Unsicherheit hervorrufen. Wir sind blockiert und können die neuen Chancen nicht erkennen.
+				</html:div>
+				<html:div class="first_absatz">Im Einzel- oder Gruppencoaching werden Herausforderungen gemeinsam reflektiert. Neue Wege kristallisieren
+					sich heraus, Chancen werden erkannt und die Probleme in aktiver Teilnahme gelöst.
+				</html:div>
+				<html:div class="first_absatz">
+					In Seminaren lernt man sein eigenes Verhalten zu verstehen und zu reflektieren, und ist damit in der Lage, das Verhalten der Anderen
+					einzuschätzen. Mit diesem Wissen (aktives Zuhören, ok-ok Positionen etc.) und dieser Erfahrung &quot;ausgerüstet&quot;, ergibt sich eine
+					gute Grundlage für eine fruchtbare zwischenmenschliche Kommunikation, sowohl beruflich als auch privat.
+				</html:div>
+				<html:div class="first_absatz">Der Kommunikations-&quot;Sender&quot; hat eine Idee und will diese mitteilen und damit etwas erreichen. Aber
+					zwischen Sender und Empfänger lauern viele Kommunikationsstörungen:</html:div>
+				<html:div class="absatz_middle">
+					„ gedacht“ ist nicht gesagt …<html:br/>
+					„gesagt“ ist nicht gehört …<html:br/>
+					„gehört“ ist nicht verstanden …<html:br/>
+					„verstanden“ ist nicht gewollt …<html:br/>
+					„gewollt“ ist nicht gekonnt …<html:br/>
+					„gekonnt und gewollt“ ist nicht getan …<html:br/>
+					„getan“ ist nicht beibehalten
+					<html:br/>
+				</html:div>
+				<html:br/>
+			</VBox>
+			</Panel>
+		</semantic:content>
+		<semantic:sendEmailAction>
+			<semantic:SendEmailAction id="shareEmail" press="sendMail"/>
+		</semantic:sendEmailAction>
+		<!--	<semantic:sendEmailAction>
+			<semantic:SendEmailAction id="shareEmail" press="onShareEmailPress"/>
+		</semantic:sendEmailAction>-->
+	</semantic:DetailPage>
+</mvc:View>

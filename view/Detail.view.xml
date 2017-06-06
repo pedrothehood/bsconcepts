@@ -21,30 +21,30 @@
 					</IconTabFilter>
 				</items>
 			</IconTabBar>-->
-			<Panel headerText="" visible="{=${Key}==='HOME'}">
+<!--			<Panel headerText="" visible="{=${Key}==='HOME'}">  abgeloest durch eigenständige Home-View!
 				<core:Fragment fragmentName="ypglmasterdetailportal.view.home" type="XML"/>
-			</Panel>
-			<Panel headerText="" visible="{=${Key}==='PROZESSBEGLEITUNG'}">
+			</Panel>-->
+<!--			<Panel headerText="" visible="{=${Key}==='PROZESSBEGLEITUNG'}"> eigene View
 				<core:Fragment fragmentName="ypglmasterdetailportal.view.prozessbegleitung" type="XML"/>
-			</Panel>
-			<Panel headerText="" visible="{=${Key}==='FENG_SHUI'}">
+			</Panel>-->
+<!--			<Panel headerText="" visible="{=${Key}==='FENG_SHUI'}"> eigene View
 				<core:Fragment fragmentName="ypglmasterdetailportal.view.fengShui" type="XML"/>
-			</Panel>
-			<Panel headerText="" visible="{=${Key}==='FOTOGRAFIE'}">
+			</Panel>-->
+<!--			<Panel headerText="" visible="{=${Key}==='FOTOGRAFIE'}"> eigene View
 				<core:Fragment fragmentName="ypglmasterdetailportal.view.fotografie" type="XML"/>
-			</Panel>
-				<Panel headerText="" visible="{=${Key}==='KALENDER'}">
+			</Panel>-->
+<!--				<Panel headerText="" visible="{=${Key}==='KALENDER'}"> eigene View
 				<core:Fragment fragmentName="ypglmasterdetailportal.view.kalenderliste" type="XML"/>
-			</Panel>
-					<Panel headerText="" visible="{=${Key}==='PROFIL'}">
+			</Panel>-->
+	<!--				<Panel headerText="" visible="{=${Key}==='PROFIL'}"> eigene View
 				<core:Fragment fragmentName="ypglmasterdetailportal.view.profil" type="XML"/>
-			</Panel>
-				<Panel headerText="" visible="{=${Key}==='KONTAKT'}">
+			</Panel>-->
+<!--				<Panel headerText="" visible="{=${Key}==='KONTAKT'}"> eigenw View
 				<core:Fragment fragmentName="ypglmasterdetailportal.view.kontakt" type="XML"/>
-			</Panel>
-				<Panel headerText="" visible="{=${Key}==='LINKS'}">
+			</Panel>-->
+<!--				<Panel headerText="" visible="{=${Key}==='LINKS'}"> eigene View
 				<core:Fragment fragmentName="ypglmasterdetailportal.view.links" type="XML"/>
-			</Panel> 
+			</Panel> -->
 	<!--		<Panel><content>
 				<VBox>
 			<Button >EMail</Button>

@@ -1,0 +1,98 @@
+<mvc:View controllerName="ypglmasterdetailportal.controller.Kontakt" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc"
+	xmlns:semantic="sap.m.semantic" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout">
+	<semantic:DetailPage id="page" navButtonPress="onNavBack" showNavButton="{device>/system/phone}" title="{path: 'Text' , formatter: 'ypglmasterdetailportal.util.Formatter.i19n'}"
+		busy="{detailView>/busy}" busyIndicatorDelay="{detailView>/delay}">
+		<semantic:content>
+			<Panel>
+			<VBox>
+				<html:h3>
+					<html:span>Kontakt</html:span>
+				</html:h3>
+				<html:p>Barbara E. Schmid - Suhr AG<html:br/>
+					+41 79 738 96 88<html:br/>
+				</html:p>
+				<html:form id="form1" method="post" action="mail.php">
+					<html:table border="0">
+						<html:tr>
+							<html:td width="100">Name(*)</html:td>
+							<html:td width="500">
+								<html:span id="sprytextfield1">
+									<html:input name="name" type="text" id="name" size="20" maxlength="60"/>
+								</html:span>
+							</html:td>
+						</html:tr>
+						<html:tr>
+							<html:td>Vorname</html:td>
+							<html:td>
+								<html:input type="text" name="vorname" id="vorname" size="20" maxlength="60"/>
+							</html:td>
+						</html:tr>
+						<html:tr>
+							<html:td>Strasse(*)</html:td>
+							<html:td>
+								<html:span id="sprytextfield3">
+									<html:input type="text" name="strasse" id="strasse" size="20" maxlength="60"/>
+								</html:span>
+							</html:td>
+						</html:tr>
+						<html:tr>
+							<html:td>PLZ(*)</html:td>
+							<html:td>
+								<html:span id="sprytextfield4">
+									<html:input name="plz" type="text" id="plz" size="10" maxlength="10"/>
+								</html:span>
+							</html:td>
+						</html:tr>
+						<html:tr>
+							<html:td>Ort(*)</html:td>
+							<html:td>
+								<html:span id="sprytextfield5">
+									<html:input type="text" name="ort" id="ort" size="20" maxlength="60"/>
+								</html:span>
+							</html:td>
+						</html:tr>
+						<html:tr>
+							<html:td>Telefon(*)</html:td>
+							<html:td>
+								<html:span id="sprytextfield6">
+									<html:input type="text" name="telefon" id="telefon" size="20" maxlength="60"/>
+								</html:span>
+							</html:td>
+						</html:tr>
+						<html:tr>
+							<html:td>Email(*)</html:td>
+							<html:td>
+								<html:span id="sprytextfield7">
+									<html:input type="text" name="email" id="email" size="20" maxlength="60"/>
+								</html:span>
+							</html:td>
+						</html:tr>
+						<html:tr>
+							<html:td>Nachricht
+							</html:td>
+							<html:td>
+								<html:textarea name="nachricht" id="nachricht" cols="40" rows="5"></html:textarea>
+							</html:td>
+						</html:tr>
+						<html:tr >
+							<html:td colspan="2">(*) = Pflichtfelder
+							</html:td>
+						</html:tr>
+						<html:tr >
+							<html:td ></html:td>
+							<html:td >
+								<html:input type="submit" name="submit" id="submit" value="Senden" class="button"/></html:td>
+						</html:tr>
+					</html:table>
+				</html:form>
+			</VBox>
+			</Panel>
+		</semantic:content>
+		<semantic:sendEmailAction>
+			<semantic:SendEmailAction id="shareEmail" press="sendMail"/>
+		</semantic:sendEmailAction>
+		<!--	<semantic:sendEmailAction>
+			<semantic:SendEmailAction id="shareEmail" press="onShareEmailPress"/>
+		</semantic:sendEmailAction>-->
+	</semantic:DetailPage>
+</mvc:View>
