@@ -29,23 +29,20 @@ sap.ui.define([
 			this.setModel(oViewModel, "detailView");
 			//	this.getOwnerComponent().getModel().metadataLoaded().then(this._onMetadataLoaded.bind(this));
 		},
-
-		goToKatalog: function(oEvent) {
+		goToItem: function(oEvent) {
 			var router = this.getRouter();
-			//var customData = oEvent.getSource().getCustomData()[0];
-				var bReplace = !Device.system.phone;
-		//	var customValue = customData.getValue();
-			router.navTo("katalog", {
-				objectId: "AUSSTELLUNG_01"
-			}, false);  // Korr. pgl
-			//console.log("hallo");
-			//alert(itemKey);	
+			var customData = oEvent.getSource().getCustomData()[0];
+			var customData = oEvent.getSource().getCustomData();
+			var linkData = {};
+			for (var i = 0; i < customData.length; i++) {
+				linkData[customData[i].getKey()] = customData[i].getValue();
+			}
+			if (!linkData.LinkKey || !linkData.route) return;
+			var bReplace = jQuery.device.is.phone ? false : true;
+			router.navTo(linkData.route, {
+				objectId: linkData.LinkKey
+			}, bReplace);
 		},
-
-		onCalenderKlick: function(oEvent) {
-
-		},
-
 		/* =========================================================== */
 		/* event handlers                                              */
 		/* =========================================================== */
@@ -75,86 +72,28 @@ sap.ui.define([
 		 * @private
 		 */
 		_onObjectMatched: function(oEvent) {
-			 
-							return;  /// Abkoppeln Detail
-			// Path ermitteln:
-			var oView = this.getView();
-			// oElementBinding = oView.getElementBinding();
-			var sPath = oEvent.getParameters().arguments.year;
-			var oResourceBundle = this.getResourceBundle();
+				// Path ermitteln:
+				var oView = this.getView();
+				//	oElementBinding = oView.getElementBinding();
+				var sPath = oEvent.getParameters().arguments.objectId ;
+				var	oResourceBundle = this.getResourceBundle();
+				
+				// Objekt-Pfad aus Wert ermitteln:
+				var tab = oView.getModel().oData.Links;
+				var retIndex;
+				tab.find(
+					function(obj,index)
+					    {if (obj.LinkKey == sPath) retIndex=index;}
+					    );
+				var path = '/Links/' + retIndex;
+                //var oObject = oView.getModel().getObject(path);
+				var sObjectId =  oEvent.getParameter("arguments").objectId;
+						this._bindView(path);
+						var oViewModel = this.getModel("detailView");
 
-			// Objekt-Pfad aus Wert ermitteln:
-			var tab = oView.getModel("kalender").oData.kalender;
-			var retIndex;
-
-			function findFirst(tab) {
-				for (var i = 0; i < tab.length; i++) {
-					if (sPath == tab[i].Jahr) {
-						retIndex = i;
-						return i;
-					}
-				}
-			}
-			findFirst(tab);
-
-			/*			tab.find(   funktioniert nicht wegen find-Befehl im IE
-							function(obj, index) {
-								if (obj.LinkKey == sPath) retIndex = index;
-							}
-						);*/
-			var path = '/kalender/' + retIndex + "/Monate";
-			//var oObject = oView.getModel().getObject(path);
-
-			var sObjectId = oEvent.getParameter("arguments").year;
-			//	this.getModel().metadataLoaded().then( function() {
-			/*	var sObjectPath = this.getModel().createKey("BSCONCEPTS", {  // Meine Analysen haben ergeben, dass Mandt=null ubergeben wird, ich konnte die Urs
-        	 	                          // Ursache nicht herausfinden, der Unterschied zu anderen SEGW-Models ist, dass der Mandant in der Struktur ist!!!
-						LinkKey :  sObjectId
-					}); */
-			//	var sObjectPath = "DEV_PORTALS(Mandt='994',LinkKey='SAP-UI5-SDK')";
-			//	this._bindView("/" + sObjectId);
-			var listPath = '/kalender/' + retIndex;
-			//	this._bindView(path);
-			this._bindView(listPath);
-			// Model nur für Einzelanzeige erstellen:
-			var data = this.getView().getModel("kalender").getData();
-			var modelData = data.kalender[retIndex];
-
-			for (var i = 0; i < modelData.Monate.length; i++) {
-				modelData.Monate[i].Jahr = sObjectId; // Jahr muss auf "Monat" vererbt werden, wegen XML-Zugriff
-				modelData.Monate[i].Text = modelData.Text;
-			}
-
-			var monatModel = new sap.ui.model.json.JSONModel();
-			monatModel.setData(modelData);
-
-			this.setModel(monatModel, "monatModel");
-
-			var oList = this.byId("MonatsListe");
-			//oList.bindItems("kalender>"+listPath);
-			//oList.bindElement(listPath);
-			var oViewModel = this.getModel("detailView");
-
-			// If the view was not bound yet its not busy, only if the binding requests data it is set to busy again
-			oViewModel.setProperty("/busy", false);
-
-			// Immer erste Seite setzen:
-			var carousel = this.getView().byId("ausstellungCarousel");
-			var pages = carousel.getPages();
-			//	var length = carousel.getPages().length;
-			/*	if (length > 1){
-						carousel.setActivePage(pages[1]);  // auslösen pageChange
-						carousel.setActivePage(pages[0]);
-				}
-				else{*/
-			carousel.setActivePage(pages[0]);
-			//	}
-			// Text setzen:
-			var carouselImageLabel = this.getView().byId("ausstellungImageLabel");
-			if (carouselImageLabel) {
-				carouselImageLabel.setText(carousel.getPages()[0].getAlt());
-			}
-			//	}.bind(this));
+				// If the view was not bound yet its not busy, only if the binding requests data it is set to busy again
+				oViewModel.setProperty("/busy", false);
+			//	}.bind(this));;
 		},
 
 		/**
@@ -186,57 +125,44 @@ sap.ui.define([
 		},
 
 		_onBindingChange: function() {
-			var oView = this.getView(),
-				oElementBinding = oView.getElementBinding();
+				var oView = this.getView(),
+					oElementBinding = oView.getElementBinding();
 
-			// No data for the binding
-			if (!oElementBinding.getBoundContext()) {
-				this.getRouter().getTargets().display("detailObjectNotFound");
-				// if object could not be found, the selection in the master list
-				// does not make sense anymore.
-				this.getOwnerComponent().oListSelector.clearMasterListSelection();
-				return;
-			}
-
-			var sPath = oElementBinding.getPath();
-			var oResourceBundle = this.getResourceBundle();
-
-			// Objekt-Pfad aus Wert ermitteln:
-			var tab2 = oView.getModel("kalender").oData.kalender;
-			var retIndex;
-
-			function findFirst(tab) {
-				for (var i = 0; i < tab.length; i++) {
-					if (sPath.substr(1) === tab[i].Jahr) {
-						retIndex = i;
-						return i;
-					}
+				// No data for the binding
+				if (!oElementBinding.getBoundContext()) {
+					this.getRouter().getTargets().display("detailObjectNotFound");
+					// if object could not be found, the selection in the master list
+					// does not make sense anymore.
+					this.getOwnerComponent().oListSelector.clearMasterListSelection();
+					return;
 				}
-			}
-			findFirst(tab2);
 
-			/*	tab.find(
-					function(obj, index) {
-						if (obj.LinkKey == sPath.substr(1)) retIndex = index;
-					}
-				);*/
-			//	var path = '/Links/' + retIndex;
-			var path = oView.getElementBinding().getPath();
-			var oObject = oView.getModel("kalender").getObject(sPath);
+				var sPath = oElementBinding.getPath();
+				var	oResourceBundle = this.getResourceBundle();
+				
+				// Objekt-Pfad aus Wert ermitteln:
+				var tab = oView.getModel().oData.Links;
+				var retIndex;
+				tab.find(
+					function(obj,index)
+					    {if (obj.LinkKey == sPath.substr(1)) retIndex=index;}
+					    );
+				var path = '/Links/' + retIndex;
+                var oObject = oView.getModel().getObject(sPath);
+				
+				
+				//var	oObject = oView.getModel().getObject(sPath);
+				var	sObjectId = oObject.LinkKey;
+				var	sObjectName = oObject.Text;
+				var	oViewModel = this.getModel("detailView");
 
-			//var	oObject = oView.getModel().getObject(sPath);
-			//	var sObjectId = oObject.LinkKey;
-			//	var sObjectName = oObject.Text;
-			var oViewModel = this.getModel("detailView");
+			//	this.getOwnerComponent().oListSelector.selectAListItem(sPath);
+			this.getOwnerComponent().oListSelector.selectAListItem(sPath);
 
-			/*			//	this.getOwnerComponent().oListSelector.selectAListItem(sPath);
-						this.getOwnerComponent().oListSelector.selectAListItem(sPath);
-
-						oViewModel.setProperty("/shareSendEmailSubject",
-							oResourceBundle.getText("shareSendEmailObjectSubject", [sObjectId]));
-						oViewModel.setProperty("/shareSendEmailMessage",
-							oResourceBundle.getText("shareSendEmailObjectMessage", [sObjectName, sObjectId, location.href]));
-				*/
+/*				oViewModel.setProperty("/shareSendEmailSubject",
+					oResourceBundle.getText("shareSendEmailObjectSubject", [sObjectId]));
+				oViewModel.setProperty("/shareSendEmailMessage",
+					oResourceBundle.getText("shareSendEmailObjectMessage", [sObjectName, sObjectId, location.href]));*/
 		},
 
 		_onMetadataLoaded: function() {
