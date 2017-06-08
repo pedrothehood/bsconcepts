@@ -11,7 +11,7 @@
 					<Label id="carouselImageLabel"  text="Bildertext"></Label>
 					<ToolbarSpacer/>
 				</Toolbar>
-				<Carousel id="calendarCarousel" class="sapUiResponsivePadding" loop="true" pages="{ path: 'monatModel>/Monate' }" pageChanged="onPageChange">
+				<Carousel id="calendarCarousel" class="sapUiResponsivePadding" loop="true" pages="{ path: 'monatModel>/Monate' }"  >
 					<pages>
 						<Image src="images/kalender/{monatModel>Jahr}/monate/{monatModel>monat}" alt="{monatModel>alt}"/>
 					</pages>
