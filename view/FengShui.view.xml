@@ -5,9 +5,7 @@
 		<semantic:content>
 			<Panel>
 	<VBox>
-				<html:h3>
-					<html:strong>Wohn- und Geschäftberatung</html:strong>
-				</html:h3>
+				<Text class="h3" text="Wohn- und Geschäftberatung"></Text> 
 				<html:div class="first_absatz">Es lohnt sich, unsere Träume bezüglich Wohn- und Geschäftsräumen zu verwirklichen.</html:div>
 				<html:div class="first_absatz">Das Leben wird durch mehr
 					<html:span class="farbe">Farbe</html:span>

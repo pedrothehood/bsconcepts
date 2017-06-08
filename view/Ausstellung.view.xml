@@ -4,9 +4,8 @@
 		busy="{detailView>/busy}" busyIndicatorDelay="{detailView>/delay}">
 		<semantic:content>
 			<Panel>
-				<html:h3>
-					<html:span>New Zealand</html:span><html:span> </html:span> <html:span class="spacer"> </html:span><Image src="images/ausstellung/2017_neuseeland/Neuseeland_50.jpg"></Image>
-				</html:h3>
+					<Text class="h3" text="New Zealand"></Text> <html:span> </html:span> <html:span class="spacer"> </html:span><Image src="images/ausstellung/2017_neuseeland/Neuseeland_50.jpg"></Image>
+			 
 				<html:h4>
 					<html:span>"Land of the long white cloud"</html:span>
 				</html:h4>

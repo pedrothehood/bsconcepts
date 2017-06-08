@@ -6,10 +6,7 @@
 			<Panel>
 			<VBox>
 				<!--<FormattedText id="formattedTextHome"   ></FormattedText> -->
-				<html:h3>
-					<html:span>Prozessbegleitung / Coaching
-					</html:span>
-				</html:h3>
+				<Text class="h3" text="Prozessbegleitung / Coaching"></Text>
 				<html:div class="first_absatz">
 					Wir werden uns den Veränderungs-Prozesse bewusst und verstehen uns selber wie auch andere besser.</html:div>
 				<html:div class="first_absatz">

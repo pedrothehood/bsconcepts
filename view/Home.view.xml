@@ -6,10 +6,7 @@
 			<Panel>
 		<VBox>
 				<!--<FormattedText id="formattedTextHome"   ></FormattedText> -->
-				<html:h3>
-					<html:span>Prozessbegleitung / Coaching 
-					</html:span>
-				</html:h3>
+	 	      <Text class="h3" text="Prozessbegleitung / Coaching"></Text>  
 				<html:div class="home_absatz">
 					<html:table width="95%" border="0">
 						<html:tr>
@@ -33,9 +30,7 @@
 							</html:td>
 						</html:tr>
 					</html:table>
-					<html:h3>
-						<html:span>Einrichten + Gestalten von Geschäfts- und Privaträumen</html:span>
-					</html:h3>
+					<Text class="h3" text="Einrichten + Gestalten von Geschäfts- und Privaträumen"></Text>
 					<html:div class="home_absatz">
 						<html:table width="95%" border="0">
 							<html:tr>
@@ -73,9 +68,7 @@
 							</html:tr>
 						</html:table>
 					</html:div>
-					<html:h3>
-						<html:span>Fotografie</html:span>
-					</html:h3>
+					<Text class="h3" text="Fotografie"></Text>
 					<html:div class="home_absatz">
 						<html:table width="95%" border="0">
 							<html:tr>

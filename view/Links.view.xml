@@ -6,9 +6,7 @@
 		<semantic:content>
 			<Panel>
 				<VBox>
-					<html:h3>
-						<html:span>Links</html:span>
-					</html:h3>
+					<Text class="h3" text="Links"></Text>
 					<html:div class="text_small">
 						<html:table width="95%" border="0">
 							<html:tr>
@@ -28,11 +26,11 @@
 								</html:td>
 							</html:tr>
 							<html:tr>
-								<html:td>Stilberatung mit Style and Go</html:td>
+								<html:td>Stilberatung mit Style &#38; Go</html:td>
 							</html:tr>
 							<html:tr>
 								<html:td>
-									<html:a href="http://www.style-and-go.com/">Style and Go</html:a>
+									<html:a href="http://www.style-and-go.com/">Style &#38; Go</html:a>
 								</html:td>
 							</html:tr>
 						</html:table>

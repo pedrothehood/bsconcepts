@@ -5,9 +5,7 @@
 		<semantic:content>
 			<Panel>
 			<VBox>
-				<html:h3>
-					<html:span>Kontakt</html:span>
-				</html:h3>
+				<Text class="h3" text="Kontakt"></Text>
 				<html:p>Barbara E. Schmid - Suhr AG<html:br/>
 					+41 79 738 96 88<html:br/>
 				</html:p>
