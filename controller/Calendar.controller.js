@@ -136,22 +136,15 @@ sap.ui.define([
 			// If the view was not bound yet its not busy, only if the binding requests data it is set to busy again
 			oViewModel.setProperty("/busy", false);
 
-			// Immer erste Seite setzen:
+/*	Temporär Block ausschalten		// Immer erste Seite setzen:
 			var carousel = this.getView().byId("calendarCarousel");
 			var pages = carousel.getPages();
-			//	var length = carousel.getPages().length;
-			/*	if (length > 1){
-						carousel.setActivePage(pages[1]);  // auslösen pageChange
-						carousel.setActivePage(pages[0]);
-				}
-				else{*/
 			carousel.setActivePage(pages[0]);
-			//	}
 			// Text setzen:
 			var carouselImageLabel = this.getView().byId("carouselImageLabel");
 			if (carouselImageLabel) {
 				carouselImageLabel.setText(carousel.getPages()[0].getAlt());
-			}
+			}*/
 			//	}.bind(this));
 		},
 
@@ -252,6 +245,7 @@ sap.ui.define([
 			oViewModel.setProperty("/delay", iOriginalViewBusyDelay);
 		},
 		onPageChange: function(oEvent) {
+			return;
 			var carousel = this.getView().byId("calendarCarousel");
 			var activeCarouselId = oEvent.getSource().getActivePage(); // gibt nur Id!!!
 			var activeCarouselPage = null;
