@@ -75,28 +75,49 @@ sap.ui.define([
 		 * @private
 		 */
 		_onObjectMatched: function(oEvent) {
-				// Path ermitteln:
-				var oView = this.getView();
-				//	oElementBinding = oView.getElementBinding();
-				var sPath = oEvent.getParameters().arguments.objectId ;
-				var	oResourceBundle = this.getResourceBundle();
-				
-				// Objekt-Pfad aus Wert ermitteln:
-				var tab = oView.getModel().oData.Links;
-				var retIndex;
-				tab.find(
-					function(obj,index)
-					    {if (obj.LinkKey == sPath) retIndex=index;}
-					    );
-				var path = '/Links/' + retIndex;
-                //var oObject = oView.getModel().getObject(path);
-				var sObjectId =  oEvent.getParameter("arguments").objectId;
-						this._bindView(path);
-						var oViewModel = this.getModel("detailView");
+			//				return;  /// Abkoppeln Detail
+			// Path ermitteln:
+			var oView = this.getView();
+			//	oElementBinding = oView.getElementBinding();
+			var sPath = oEvent.getParameters().arguments.objectId;
+			var oResourceBundle = this.getResourceBundle();
 
-				// If the view was not bound yet its not busy, only if the binding requests data it is set to busy again
-				oViewModel.setProperty("/busy", false);
-			//	}.bind(this));;
+			// Objekt-Pfad aus Wert ermitteln:
+			var tab = oView.getModel().oData.Links;
+			var retIndex;
+
+			function findFirst(tab) {
+				for (var i = 0; i < tab.length; i++) {
+					if (sPath == tab[i].LinkKey) {
+						retIndex = i;
+						return i;
+					}
+				}
+			}
+			findFirst(tab);
+
+			/*			tab.find(   funktioniert nicht wegen find-Befehl im IE
+							function(obj, index) {
+								if (obj.LinkKey == sPath) retIndex = index;
+							}
+						);*/
+			var path = '/Links/' + retIndex;
+			//var oObject = oView.getModel().getObject(path);
+
+			var sObjectId = oEvent.getParameter("arguments").objectId;
+			//	this.getModel().metadataLoaded().then( function() {
+			/*	var sObjectPath = this.getModel().createKey("BSCONCEPTS", {  // Meine Analysen haben ergeben, dass Mandt=null ubergeben wird, ich konnte die Urs
+        	 	                          // Ursache nicht herausfinden, der Unterschied zu anderen SEGW-Models ist, dass der Mandant in der Struktur ist!!!
+						LinkKey :  sObjectId
+					}); */
+			//	var sObjectPath = "DEV_PORTALS(Mandt='994',LinkKey='SAP-UI5-SDK')";
+			//	this._bindView("/" + sObjectId);
+			this._bindView(path);
+			var oViewModel = this.getModel("detailView");
+
+			// If the view was not bound yet its not busy, only if the binding requests data it is set to busy again
+			oViewModel.setProperty("/busy", false);
+			//	}.bind(this));
 		},
 
 		/**
@@ -112,7 +133,7 @@ sap.ui.define([
 
 			// If the view was not bound yet its not busy, only if the binding requests data it is set to busy again
 			oViewModel.setProperty("/busy", false);
-			// Liste explizit binden
+
 			this.getView().bindElement({
 				path: sObjectPath,
 				events: {
@@ -128,45 +149,57 @@ sap.ui.define([
 		},
 
 		_onBindingChange: function() {
-				var oView = this.getView(),
-					oElementBinding = oView.getElementBinding();
+			var oView = this.getView(),
+				oElementBinding = oView.getElementBinding();
 
-				// No data for the binding
-				if (!oElementBinding.getBoundContext()) {
-					this.getRouter().getTargets().display("detailObjectNotFound");
-					// if object could not be found, the selection in the master list
-					// does not make sense anymore.
-					this.getOwnerComponent().oListSelector.clearMasterListSelection();
-					return;
+			// No data for the binding
+			if (!oElementBinding.getBoundContext()) {
+				this.getRouter().getTargets().display("detailObjectNotFound");
+				// if object could not be found, the selection in the master list
+				// does not make sense anymore.
+				this.getOwnerComponent().oListSelector.clearMasterListSelection();
+				return;
+			}
+
+			var sPath = oElementBinding.getPath();
+			var oResourceBundle = this.getResourceBundle();
+
+			// Objekt-Pfad aus Wert ermitteln:
+			var tab2 = oView.getModel().oData.Links;
+			var retIndex;
+			
+						function findFirst(tab) {
+				for (var i = 0; i < tab.length; i++) {
+					if (sPath.substr(1) === tab[i].LinkKey) {
+						retIndex = i;
+						return i;
+					}
 				}
+			}
+			findFirst(tab2);
+			
+		/*	tab.find(
+				function(obj, index) {
+					if (obj.LinkKey == sPath.substr(1)) retIndex = index;
+				}
+			);*/
+			var path = '/Links/' + retIndex;
+			var oObject = oView.getModel().getObject(sPath);
 
-				var sPath = oElementBinding.getPath();
-				var	oResourceBundle = this.getResourceBundle();
-				
-				// Objekt-Pfad aus Wert ermitteln:
-				var tab = oView.getModel().oData.Links;
-				var retIndex;
-				tab.find(
-					function(obj,index)
-					    {if (obj.LinkKey == sPath.substr(1)) retIndex=index;}
-					    );
-				var path = '/Links/' + retIndex;
-                var oObject = oView.getModel().getObject(sPath);
-				
-				
-				//var	oObject = oView.getModel().getObject(sPath);
-				var	sObjectId = oObject.LinkKey;
-				var	sObjectName = oObject.Text;
-				var	oViewModel = this.getModel("detailView");
+			//var	oObject = oView.getModel().getObject(sPath);
+			var sObjectId = oObject.LinkKey;
+			var sObjectName = oObject.Text;
+			var oViewModel = this.getModel("detailView");
 
 			//	this.getOwnerComponent().oListSelector.selectAListItem(sPath);
 			this.getOwnerComponent().oListSelector.selectAListItem(sPath);
 
-/*				oViewModel.setProperty("/shareSendEmailSubject",
-					oResourceBundle.getText("shareSendEmailObjectSubject", [sObjectId]));
-				oViewModel.setProperty("/shareSendEmailMessage",
-					oResourceBundle.getText("shareSendEmailObjectMessage", [sObjectName, sObjectId, location.href]));*/
+/*			oViewModel.setProperty("/shareSendEmailSubject",
+				oResourceBundle.getText("shareSendEmailObjectSubject", [sObjectId]));
+			oViewModel.setProperty("/shareSendEmailMessage",
+				oResourceBundle.getText("shareSendEmailObjectMessage", [sObjectName, sObjectId, location.href]));*/
 		},
+
 
 		_onMetadataLoaded: function() {
 			// Store original busy indicator delay for the detail view
