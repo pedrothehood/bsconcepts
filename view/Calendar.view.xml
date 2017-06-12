@@ -5,7 +5,7 @@
 		<semantic:content>
 			<ObjectHeader id="objectHeader" title="{monatModel>/Monate/0/Text}" numberUnit="{LinkType}"></ObjectHeader>
 			<!--	<Text text="{monatModel>/Monate/0/Text}"></Text>-->
-			<l:VerticalLayout class="sapUiSmallMargin">
+				<VBox class="sapUiSmallMargin">
 				<Toolbar>
 					<ToolbarSpacer/>
 					<Label id="carouselImageLabel"  text="Bildertext"></Label>
@@ -16,7 +16,7 @@
 						<Image src="images/kalender/{monatModel>Jahr}/monate/{monatModel>monat}" alt="{monatModel>alt}"/>
 					</pages>
 				</Carousel>
-			</l:VerticalLayout>
+			</VBox>
 			<!-- Liste zum Testen			<List class="sapContrast sapContrastPlus" headerText="{monatModel>/Monate/0/Text}" id="MonatsListe" items="{path: 'monatModel>/Monate' }">
 				<items>
 					<StandardListItem title="{monatModel>monat}" iconDensityAware="false" iconInset="false"
