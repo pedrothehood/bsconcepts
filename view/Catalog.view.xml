@@ -25,6 +25,11 @@
 					</Toolbar>
 				</headerToolbar>
 				<columns id="catalogTable_columns">
+					<Column hAlign="Right" id="catalogTable_col0" width="2em">
+						<header id="catalogTable_col0_header">
+							<Label id="catalogTable_col0_label1" text="Nr."/>
+						</header>
+					</Column>
 					<Column hAlign="Left" id="catalogTable_col1">
 						<header id="catalogTable_col1_header">
 							<Label id="catalogTable_col1_label1" text="Name"/>
@@ -53,6 +58,7 @@
 				</columns>
 				<ColumnListItem class="navTableItemLayout" id="columnListItem" vAlign="Middle">
 					<cells id="columnListItem_cells">
+						<Text id="columnListItem_cell_0" text="{selectedAusstellungModel>nummer}"></Text>
 						<Text id="columnListItem_cell_1" text="{selectedAusstellungModel>name}"></Text>
 						<Text id="columnListItem_cell_1a" text="{selectedAusstellungModel>text}"></Text>
 						<Text id="columnListItem_cell_2" text="{selectedAusstellungModel>preis}"></Text>

@@ -1,37 +1,63 @@
 <mvc:View controllerName="ypglmasterdetailportal.controller.Ausstellung" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc"
 	xmlns:semantic="sap.m.semantic" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout">
-	<semantic:DetailPage id="page" navButtonPress="onNavBack" showNavButton="{device>/system/phone}" title="{path: 'Text' , formatter: 'ypglmasterdetailportal.util.Formatter.i19n'}"
-		busy="{detailView>/busy}" busyIndicatorDelay="{detailView>/delay}">
+	<semantic:DetailPage id="page" navButtonPress="onNavBack" showNavButton="{device>/system/phone}"
+		title="{path: 'Text' , formatter: 'ypglmasterdetailportal.util.Formatter.i19n'}" busy="{detailView>/busy}"
+		busyIndicatorDelay="{detailView>/delay}">
 		<semantic:content>
 			<Panel>
-					<Text class="h3" text="New Zealand"></Text> <html:span> </html:span> <html:span class="spacer"> </html:span><Image src="images/ausstellung/2017_neuseeland/Neuseeland_50.jpg"></Image>
-			 
+				<Text class="h3" text="New Zealand"></Text>
+				<html:span></html:span>
+				<html:span class="spacer"></html:span>
+				<Image src="images/ausstellung/2017_neuseeland/Neuseeland_50.jpg"></Image>
 				<html:h4>
 					<html:span>"Land of the long white cloud"</html:span>
 				</html:h4>
 				<!--<html:img src="images/ausstellung/2017_neuseeland/Neuseeland_50.jpg"></html:img>-->
 				<Image src="images/ausstellung/2017_neuseeland/land-of-the-long-white-cloud_small.jpg" alt="Land of the long white cloud"/>
-				<Text class="sapUiTinyMarginBottom"  text="{i18n>AUSSTELLUNG_FIRST}"></Text>
-	
-				<!--<l:VerticalLayout class="sapUiSmallMargin">-->
-		 
-								<Link text="{i18n>AUSSTELLUNG_GEHE_ZU_BILDVERZEICHNIS}" press="goToKatalog">
-									<!--<customData>
+				
+				<Text class="sapUiTinyMarginBottom" text="{i18n>AUSSTELLUNG_FIRST}">
+					
+				</Text>
+			 
+				 	<Link class="block" text="{i18n>AUSSTELLUNG_GEHE_ZU_BILDVERZEICHNIS}" press="goToKatalog">
+					<!--<customData>
 										<core:CustomData key="LinkKey" value="PROZESSBEGLEITUNG"/>
 									</customData>-->
-								</Link>
-					<!--	<Carousel id="calendarCarousel" class="sapUiResponsivePadding" loop="true" pages="{ path: 'monatModel>/Monate' }" pageChanged="onPageChange">
+				</Link>
+				 
+				<!--<l:VerticalLayout class="sapUiSmallMargin">-->
+			
+				<!--	<Carousel id="calendarCarousel" class="sapUiResponsivePadding" loop="true" pages="{ path: 'monatModel>/Monate' }" pageChanged="onPageChange">
 					<pages>
 						<Image src="images/kalender/{monatModel>Jahr}/monate/{monatModel>monat}" alt="{monatModel>alt}"/>
 					</pages>
 				</Carousel>-->
-		<!--		</l:VerticalLayout>-->
+				<!--		</l:VerticalLayout>-->
 				<!-- Liste zum Testen			<List class="sapContrast sapContrastPlus" headerText="{monatModel>/Monate/0/Text}" id="MonatsListe" items="{path: 'monatModel>/Monate' }">
 				<items>
 					<StandardListItem title="{monatModel>monat}" iconDensityAware="false" iconInset="false"
 						icon="images/kalender/{monatModel>Jahr}/monate/{monatModel>monat}"/>
 				</items>
 			</List>-->
+				<!--<html:Table width="70%">
+					<html:tr>
+						<html:td>
+							<Image src="images/ausstellung/2017_neuseeland/land-of-the-long-white-cloud_small.jpg" alt="Land of the long white cloud"/>
+						</html:td>
+					</html:tr>
+					<html:tr>
+						<html:td>
+							<Text class="sapUiTinyMarginBottom" text="{i18n>AUSSTELLUNG_FIRST}"></Text>
+						</html:td>
+					</html:tr>
+					<html:tr>
+						<html:td>
+							<Link text="{i18n>AUSSTELLUNG_GEHE_ZU_BILDVERZEICHNIS}" press="goToKatalog">
+							 
+							</Link>
+						</html:td>
+					</html:tr>
+				</html:Table>-->
 			</Panel>
 		</semantic:content>
 		<semantic:sendEmailAction>
